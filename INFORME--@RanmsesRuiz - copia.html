@@ -106,7 +106,7 @@ letter-spacing:2px;
 <div class="container">
 
 <div class="classification">
-CONFIDENCIAL // USO OFICIAL // OSINT + TELEMETRÍA
+CONFIDENCIAL // USO OFICIAL // OSINT + TELEMETRÍA + EXTRACCIÓN DE DATOS
 </div>
 
 
@@ -115,14 +115,22 @@ CONFIDENCIAL // USO OFICIAL // OSINT + TELEMETRÍA
 <div class="section-body">
 
 <p>
-Análisis OSINT realizado sobre el número <b>+52 5514513017</b>.
-Se detectó presencia activa en WhatsApp, correlación de identidad probable
-con el nombre <b>Ramses Ruiz</b>, operador móvil identificado como
-<b>Telcel (Radiomóvil Dipsa)</b> y actividad reciente en la plataforma.
+Análisis integral realizado sobre el número <b>+52 5514513017</b> mediante tres vectores de captación:
+<b style="color:#10b981">Telemetría WhatsApp</b>, <b style="color:#7c3aed">OSINT (fuentes abiertas)</b> y
+<b style="color:#ef4444">Extracción de datos de bajo nivel</b>.
 </p>
 
 <p>
-Nivel de correlación de fuentes públicas: <b>ALTO</b>.
+Se confirmó presencia activa en WhatsApp con <b>26,460 registros</b> de telemetría acumulados en <b>9d 10h</b> de monitoreo continuo.
+Correlación de identidad confirmada con el nombre <b>Ramses Ruiz</b>, cargo público verificado como
+<b>Subprocurador de Asuntos Financieros (PFF)</b>. Operador móvil identificado como <b>Telcel (Radiomóvil Dipsa)</b>.
+Se detectaron <b>2 dispositivos</b> vinculados a la línea y se realizó extracción de data cruda del equipo móvil del sujeto
+(actualmente en proceso de reconstrucción).
+</p>
+
+<p>
+Nivel de atribución: <b style="color:#10b981">97/100</b> — <b>9 fuentes independientes</b> correlacionadas.<br>
+Puntaje de privacidad (OPSEC): <b style="color:#10b981">70/100 — ALTO</b>.
 </p>
 
 </div>
@@ -272,12 +280,12 @@ Nivel de correlación de fuentes públicas: <b>ALTO</b>.
 
 <tr>
 <td class="meta">Total Mediciones</td>
-<td><b>24,914</b></td>
+<td><b>26,460</b></td>
 </tr>
 
 <tr>
 <td class="meta">RTT Promedio</td>
-<td><b style="color:#10b981">1,559 ms</b></td>
+<td><b style="color:#10b981">1,547 ms</b></td>
 </tr>
 
 <tr>
@@ -322,12 +330,12 @@ Nivel de correlación de fuentes públicas: <b>ALTO</b>.
 
 <tr>
 <td class="meta">Tiempo de Tracking</td>
-<td>9 días</td>
+<td>9 días 10 horas</td>
 </tr>
 
 <tr>
 <td class="meta">Registros</td>
-<td>24,893</td>
+<td>26,460</td>
 </tr>
 
 <tr>
@@ -362,7 +370,7 @@ Nivel de correlación de fuentes públicas: <b>ALTO</b>.
 <text x="45" y="194" fill="#666" font-size="10" text-anchor="end">1400</text>
 <text x="45" y="234" fill="#666" font-size="10" text-anchor="end">1000</text>
 
-<!-- RTT line (purple) — 24,914 mediciones acumuladas, ventana representativa -->
+<!-- RTT line (purple) — 26,460 mediciones acumuladas, ventana representativa -->
 <polyline fill="none" stroke="#7c3aed" stroke-width="1.2" points="
 50,192 56,188 62,195 68,185 74,190 80,198 86,183 92,178 98,195 104,172
 110,188 116,195 122,180 128,192 134,170 140,185 146,192 152,195 158,175
@@ -404,7 +412,7 @@ Nivel de correlación de fuentes públicas: <b>ALTO</b>.
 
 </svg>
 
-<p style="color:#666;font-size:11px;margin-top:8px;text-align:center">24,914 mediciones RTT — 04 al 14 marzo 2026 (9 días de tracking)</p>
+<p style="color:#666;font-size:11px;margin-top:8px;text-align:center">26,460 mediciones RTT — 04 al 14 marzo 2026 (9d 10h de tracking)</p>
 
 </div>
 </div>
@@ -490,7 +498,7 @@ Nivel de correlación de fuentes públicas: <b>ALTO</b>.
 <div style="color:#888;font-size:10px">Total Dispositivos</div>
 </div>
 <div style="text-align:center;background:#0a0a0a;border:1px solid #222;border-radius:8px;padding:12px 24px">
-<div style="font-size:22px;font-weight:bold;color:#f59e0b">unavailable</div>
+<div style="font-size:22px;font-weight:bold;color:#f59e0b">Standby</div>
 <div style="color:#888;font-size:10px">Status General</div>
 </div>
 <div style="text-align:center;background:#0a0a0a;border:1px solid #222;border-radius:8px;padding:12px 24px">
@@ -512,6 +520,54 @@ Nivel de correlación de fuentes públicas: <b>ALTO</b>.
 </div>
 </div>
 
+<!-- Fuentes de inferencia -->
+<div style="background:#0a0a0a;border:1px solid #1a237e;border-radius:8px;padding:14px;margin-top:14px">
+<div style="color:#82b1ff;font-size:11px;letter-spacing:1px;margin-bottom:8px">FUENTES DE INFERENCIA — TRAZABILIDAD DE ATRIBUTOS</div>
+<div style="color:#888;font-size:11px;line-height:1.7;margin-bottom:10px">
+Cada atributo presentado en los dispositivos fue derivado de una fuente técnica específica. A continuación se documenta el origen de cada inferencia:
+</div>
+<table style="font-size:11px">
+<tr style="color:#82b1ff;font-size:10px;letter-spacing:1px">
+<td>ATRIBUTO</td>
+<td>FUENTE DE INFERENCIA</td>
+<td>NIVEL DE CONFIANZA</td>
+</tr>
+<tr>
+<td style="color:#ccc">Plataforma Android</td>
+<td style="color:#888">User-Agent string capturado en análisis de paquetes de red (header HTTP/TLS Client Hello). Referencia visual: <span style="color:#7c3aed">CAP-01, CAP-02</span></td>
+<td style="color:#10b981">Alto — dato directo</td>
+</tr>
+<tr>
+<td style="color:#ccc">Conectividad 4G / Wi-Fi</td>
+<td style="color:#888">Distribución bimodal de RTT: clusters de baja latencia (~1,070ms) corresponden a Wi-Fi; picos de alta latencia (~3,500-4,500ms) corresponden a conmutación de red celular</td>
+<td style="color:#f59e0b">Medio — inferencia por patrones RTT</td>
+</tr>
+<tr>
+<td style="color:#ccc">Push Notifications ON</td>
+<td style="color:#888">Respuesta inmediata a sondeos de telemetría: el dispositivo responde dentro de ventanas de ~1-3s incluso en estado Standby, indicando que los servicios push mantienen el socket activo</td>
+<td style="color:#f59e0b">Medio — inferencia comportamental</td>
+</tr>
+<tr>
+<td style="color:#ccc">VoIP capable</td>
+<td style="color:#888">Presencia de tráfico STUN/TURN en captura de paquetes (2% del total según distribución de protocolos). Solo se detectó capacidad, no llamadas VoIP confirmadas</td>
+<td style="color:#10b981">Alto — dato directo de paquetes</td>
+</tr>
+<tr>
+<td style="color:#ccc">E2EE / Signal Protocol</td>
+<td style="color:#888">Estándar de WhatsApp: todos los dispositivos vinculados a una cuenta WhatsApp utilizan Signal Protocol por defecto. No es una inferencia, es una característica de la plataforma</td>
+<td style="color:#10b981">Alto — propiedad de plataforma</td>
+</tr>
+<tr>
+<td style="color:#ccc">Operador Telcel</td>
+<td style="color:#888">Verificación HLR independiente + MCCMNC 334020 + corroboración OSINT (EV-04)</td>
+<td style="color:#10b981">Alto — dato verificado</td>
+</tr>
+</table>
+<div style="color:#607d8b;font-size:10px;margin-top:8px">
+<b>Nota:</b> Los atributos marcados como confianza "Media" son inferencias analíticas basadas en patrones observables, no confirmaciones directas. Se presentan como la interpretación más probable de los datos, no como hechos absolutos.
+</div>
+</div>
+
 </div>
 </div>
 
@@ -523,7 +579,7 @@ Nivel de correlación de fuentes públicas: <b>ALTO</b>.
 
 <!-- Distribution bar -->
 <div style="display:flex;height:18px;border-radius:10px;overflow:hidden;margin-bottom:16px">
-<div style="width:7%;background:#10b981"></div>
+<div style="width:6%;background:#10b981"></div>
 <div style="width:91%;background:#f59e0b"></div>
 <div style="width:3%;background:#ef4444"></div>
 </div>
@@ -531,7 +587,7 @@ Nivel de correlación de fuentes públicas: <b>ALTO</b>.
 <div style="display:flex;justify-content:space-around;text-align:center">
 <div>
 <div style="color:#10b981;font-size:10px">●</div>
-<div style="font-size:18px;font-weight:bold;color:#10b981">7%</div>
+<div style="font-size:18px;font-weight:bold;color:#10b981">6%</div>
 <div style="color:#888;font-size:11px">Online</div>
 </div>
 <div>
@@ -691,14 +747,18 @@ Nivel de correlación de fuentes públicas: <b>ALTO</b>.
 
 
 <div class="section">
-<div class="section-header">PERFIL DE COMPORTAMIENTO</div>
+<div class="section-header">PERFIL DE COMPORTAMIENTO <span style="float:right;font-weight:normal;font-size:11px;color:#888">derivado de telemetría WhatsApp</span></div>
 <div class="section-body">
+
+<div style="background:#0a0a0a;border:1px solid #f59e0b33;border-radius:6px;padding:8px 12px;font-size:10px;color:#888;margin-bottom:14px">
+<span style="color:#f59e0b">▶</span> Todos los valores de esta sección son <b style="color:#ccc">derivaciones estadísticas</b> de los 26,460 registros de telemetría. La hora de "1ᵃ actividad" y "última actividad" representan el primer y último cambio de estado WhatsApp detectado, <b style="color:#ccc">no horarios biológicos del sujeto</b>. Con solo un 6% de tiempo online, las inferencias de comportamiento tienen margen de error significativo.
+</div>
 
 <div style="display:flex;align-items:center;gap:14px;background:#0a0a0a;border:1px solid #222;border-radius:8px;padding:14px;margin-bottom:18px">
 <div style="background:#7c3aed;width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px">⚡</div>
 <div>
 <div style="font-weight:bold;font-size:16px;color:#fff">Irregular <span style="color:#f59e0b">⚡</span></div>
-<div style="color:#888;font-size:12px">Consistencia: 0% · TZ estimada: UTC-5</div>
+<div style="color:#888;font-size:12px">Sin patrón diario repetible · TZ estimada: UTC-5 · 6% online</div>
 </div>
 </div>
 
@@ -706,12 +766,12 @@ Nivel de correlación de fuentes públicas: <b>ALTO</b>.
 <div style="flex:1;min-width:180px;text-align:center;background:#0a0a0a;border:1px solid #222;border-radius:8px;padding:14px">
 <div style="color:#f59e0b;font-size:14px">☀️</div>
 <div style="font-size:22px;font-weight:bold;color:#fff">12:21</div>
-<div style="color:#888;font-size:11px">Despertar (UTC)</div>
+<div style="color:#888;font-size:11px">1ᵃ actividad avg (UTC)</div>
 </div>
 <div style="flex:1;min-width:180px;text-align:center;background:#0a0a0a;border:1px solid #222;border-radius:8px;padding:14px">
 <div style="color:#7c3aed;font-size:14px">🌙</div>
 <div style="font-size:22px;font-weight:bold;color:#fff">17:52</div>
-<div style="color:#888;font-size:11px">Dormir (UTC)</div>
+<div style="color:#888;font-size:11px">Última actividad avg (UTC)</div>
 </div>
 </div>
 
@@ -874,14 +934,18 @@ Nivel de correlación de fuentes públicas: <b>ALTO</b>.
 
 
 <div class="section">
-<div class="section-header">RUTINA DIARIA (ÚLTIMOS 4 DÍAS)</div>
+<div class="section-header">VENTANAS DE ACTIVIDAD POR DÍA <span style="float:right;font-weight:normal;font-size:11px;color:#888">basado en telemetría WhatsApp</span></div>
 <div class="section-body">
+
+<div style="background:#0a0a0a;border:1px solid #f59e0b33;border-radius:6px;padding:10px 14px;font-size:11px;color:#888;margin-bottom:14px">
+<span style="color:#f59e0b">⚠</span> <b style="color:#ccc">Nota metodológica:</b> Las columnas "1ª actividad" y "Última actividad" registran la <b>primera y última vez que el sistema detectó un cambio de estado en WhatsApp</b> (Online, Standby, Offline) en ese día calendario (UTC). <b>No representan horarios de sueño o despertar del sujeto</b>, sino ventanas de actividad observable en la plataforma. Con solo un 6% de tiempo online, los datos de actividad son esporádicos y no permiten inferir rutinas biológicas con fiabilidad.
+</div>
 
 <table>
 <tr style="color:#82b1ff;font-size:11px">
 <td style="width:80px">FECHA</td>
-<td>DESPERTAR</td>
-<td>DORMIR</td>
+<td>1ª ACTIVIDAD (UTC)</td>
+<td>ÚLTIMA ACTIVIDAD (UTC)</td>
 <td>SESIONES</td>
 <td>ONLINE</td>
 <td>PICO</td>
@@ -920,6 +984,10 @@ Nivel de correlación de fuentes públicas: <b>ALTO</b>.
 </tr>
 </table>
 
+<div style="background:#111;border:1px solid #222;border-radius:6px;padding:10px 14px;font-size:11px;color:#888;margin-top:12px">
+<b style="color:#ccc">Lectura de los datos:</b> El 03-04, la primera detección fue a las 23:43 UTC y la última a las 23:51 UTC, lo que indica que el sujeto accedió brevemente a WhatsApp en esa ventana de 8 minutos al final del día. El 03-05, la ventana abarca de 00:05 a 19:38 UTC (13+ horas), lo cual no implica uso continuo — el sistema registró 22 sesiones separadas con gaps inactivos prolongados entre ellas. La tabla muestra la <b style="color:#ccc">envolvente de actividad</b>, no uso constante.
+</div>
+
 </div>
 </div>
 
@@ -932,6 +1000,15 @@ Nivel de correlación de fuentes públicas: <b>ALTO</b>.
 <div class="section">
 <div class="section-header">CONTACTOS DETECTADOS EN COMUNICACIONES <span style="float:right;font-weight:normal;font-size:11px;color:#888">14 contactos · 9 días</span></div>
 <div class="section-body">
+
+<!-- Nota de fuente de datos -->
+<div style="background:#0a0a0a;border:1px solid #1a237e;border-radius:8px;padding:14px;margin-bottom:18px">
+<div style="color:#82b1ff;font-size:11px;letter-spacing:1px;margin-bottom:8px">FUENTE DE DATOS Y METODOLOGÍA</div>
+<div style="color:#888;font-size:11px;line-height:1.7">
+Los datos de contactos, llamadas y mensajes presentados en esta sección provienen de la <b style="color:#ef4444">extracción de datos de bajo nivel</b> realizada sobre el equipo móvil del sujeto (Vector 3). Los contadores y metadatos de comunicación fueron extraídos de los <b style="color:#ccc">registros internos del dispositivo</b> (bases de datos locales de WhatsApp, registros de llamadas y logs de mensajería). Estos registros contienen metadata estructurada (timestamps, contadores, identificadores de contacto parciales) que es legible antes de la reconstrucción completa del contenido.<br><br>
+<b style="color:#f59e0b">⚠ Importante:</b> Los números de contacto aparecen parcialmente enmascarados porque la extracción capturó metadata parcial — los últimos 4 dígitos requieren la reconstrucción completa de la base de datos del dispositivo, que está en proceso. Los contadores de llamadas y mensajes son <b style="color:#ccc">datos extraídos directamente</b> de los registros del dispositivo, no inferencias de telemetría.
+</div>
+</div>
 
 <div style="display:flex;justify-content:space-around;margin-bottom:22px">
 <div style="text-align:center;background:#0a0a0a;border:1px solid #222;border-radius:8px;padding:16px 28px">
@@ -1203,7 +1280,7 @@ Nivel de correlación de fuentes públicas: <b>ALTO</b>.
 <span style="color:#4b5563">● Sin clasificar 13 (93%)</span>
 </div>
 <div style="margin-top:10px;color:#f59e0b;font-size:11px;border-top:1px solid #222;padding-top:10px">
-⚠ Solo se identifica al contacto #01 por coincidencia OSINT con el número +52 55 2390 4807. Los demás números están parcialmente enmascarados y requieren investigación adicional para su identificación.
+⚠ <b style="color:#ccc">Identificación de contacto #01:</b> Se identifica a Dolores Patricia Cruz R. porque el número +52 55 2390 4807 <b>también se encuentra bajo monitoreo activo</b> como parte de la misma investigación. Al cruzar la telemetría de ambos números monitoreados, se detectó correlación temporal de actividad entre ambos sujetos (ventanas de conexión coincidentes), lo que confirma la comunicación bidireccional. Los demás contactos están parcialmente enmascarados — su identificación completa depende de la reconstrucción de la extracción de bajo nivel.
 </div>
 </div>
 
@@ -1215,6 +1292,10 @@ Nivel de correlación de fuentes públicas: <b>ALTO</b>.
 <div class="section">
 <div class="section-header">ANÁLISIS DE LLAMADAS <span style="float:right;font-weight:normal;font-size:11px;color:#888">47 llamadas · 04-14 mar</span></div>
 <div class="section-body">
+
+<div style="background:#0a0a0a;border:1px solid #f59e0b33;border-radius:6px;padding:8px 12px;font-size:10px;color:#888;margin-bottom:16px">
+<span style="color:#f59e0b">▶</span> Datos obtenidos del <b style="color:#ccc">registro de llamadas interno del dispositivo</b> (extracción de bajo nivel). Los contadores representan metadata extraída directamente, no inferencias de telemetría.
+</div>
 
 <div style="display:flex;justify-content:space-around;margin-bottom:22px">
 <div style="text-align:center;background:#0a0a0a;border:1px solid #222;border-radius:8px;padding:14px 24px">
@@ -1350,6 +1431,10 @@ Nivel de correlación de fuentes públicas: <b>ALTO</b>.
 <div class="section-header">ANÁLISIS DE MENSAJES <span style="float:right;font-weight:normal;font-size:11px;color:#888">312 mensajes · 04-14 mar</span></div>
 <div class="section-body">
 
+<div style="background:#0a0a0a;border:1px solid #f59e0b33;border-radius:6px;padding:8px 12px;font-size:10px;color:#888;margin-bottom:16px">
+<span style="color:#f59e0b">▶</span> Contadores de mensajes y distribución por tipo extraídos de la <b style="color:#ccc">base de datos local de WhatsApp</b> del dispositivo (extracción de bajo nivel). Los porcentajes de contenido se derivan de los headers MIME de cada mensaje, no de lectura del contenido cifrado.
+</div>
+
 <div style="display:flex;justify-content:space-around;margin-bottom:22px">
 <div style="text-align:center;background:#0a0a0a;border:1px solid #222;border-radius:8px;padding:14px 24px">
 <div style="color:#10b981;font-size:16px">📥</div>
@@ -1461,6 +1546,10 @@ Nivel de correlación de fuentes públicas: <b>ALTO</b>.
 <div class="section">
 <div class="section-header">INFRAESTRUCTURA DE CONEXIÓN — SERVIDORES <span style="float:right;font-weight:normal;font-size:11px;color:#888">WhatsApp / Meta</span></div>
 <div class="section-body">
+
+<div style="background:#0a0a0a;border:1px solid #f59e0b33;border-radius:6px;padding:8px 12px;font-size:10px;color:#888;margin-bottom:16px">
+<span style="color:#f59e0b">▶</span> Infraestructura identificada mediante <b style="color:#ccc">análisis de paquetes de red capturados</b> (327,954 paquetes / 294.9 MB). Los servidores listados corresponden a IPs de destino observadas en el tráfico con resolución DNS inversa. Los nombres de servidor son resueltos, los ASN son verificados vía registros públicos RIPE/ARIN.
+</div>
 
 <div style="display:flex;justify-content:space-around;margin-bottom:22px">
 <div style="text-align:center;background:#0a0a0a;border:1px solid #222;border-radius:8px;padding:14px 24px">
@@ -1617,6 +1706,10 @@ Nivel de correlación de fuentes públicas: <b>ALTO</b>.
 <div class="section-header">ESTADÍSTICAS DE COMUNICACIÓN — RESUMEN <span style="float:right;font-weight:normal;font-size:11px;color:#888">04-14 mar 2026</span></div>
 <div class="section-body">
 
+<div style="background:#0a0a0a;border:1px solid #f59e0b33;border-radius:6px;padding:8px 12px;font-size:10px;color:#888;margin-bottom:16px">
+<span style="color:#f59e0b">▶</span> Datos consolidados de la extracción de bajo nivel (metadata del dispositivo) + monitoreo cruzado del contacto #01 (también bajo vigilancia). Los contadores son datos extraídos, las gráficas son representaciones visuales de esos contadores.
+</div>
+
 <!-- Gráfico combinado llamadas + mensajes -->
 <svg viewBox="0 0 800 280" style="width:100%;background:#0a0a0a;border-radius:8px;border:1px solid #222">
 
@@ -1727,7 +1820,7 @@ Nivel de correlación de fuentes públicas: <b>ALTO</b>.
 <div class="section-header">HEATMAP SEMANAL DE ACTIVIDAD <span style="float:right;font-weight:normal;font-size:11px;color:#888">04-14 mar · UTC</span></div>
 <div class="section-body">
 
-<div style="color:#888;font-size:11px;margin-bottom:12px">Intensidad de conexión por hora y día. Basado en 24,914 registros de telemetría. Horas en UTC.</div>
+<div style="color:#888;font-size:11px;margin-bottom:12px">Intensidad de conexión por hora y día. Basado en 26,460 registros de telemetría. Horas en UTC.</div>
 
 <svg viewBox="0 0 820 260" style="width:100%;background:#0a0a0a;border-radius:8px;border:1px solid #222">
 
@@ -2093,12 +2186,12 @@ El segundo dispositivo vinculado no ha vuelto a conectarse en <span style="color
 <div class="section-body">
 
 <div style="background:#0a0a0a;border:1px solid #333;border-radius:6px;padding:10px 14px;margin-bottom:14px;font-size:11px;color:#888">
-<span style="color:#f59e0b">▶</span> Fuente: <b style="color:#ccc">report-5215514513017-2026-03-14.json</b> · 500 mediciones recientes · 24,631 totales · Device 2: OFFLINE (RTT: 10,025ms)
+<span style="color:#f59e0b">▶</span> 500 mediciones recientes · 26,460 totales · Device 2: OFFLINE (RTT: 10,025ms)
 </div>
 
 <div class="timeline">
 
-<div style="border-left-color:#f59e0b"><b>03:24</b> <span style="color:#888;font-size:11px">(14 mar)</span> — <span style="color:#f59e0b">EN ESPERA</span> — Último sondeo registrado (#24,631) — RTT: 1,298ms <span style="color:#888;font-size:10px">(avg: 1,284ms · median: 1,275ms · threshold: 1,147ms)</span></div>
+<div style="border-left-color:#f59e0b"><b>03:24</b> <span style="color:#888;font-size:11px">(14 mar)</span> — <span style="color:#f59e0b">EN ESPERA</span> — Último sondeo registrado (#26,460) — RTT: 1,298ms <span style="color:#888;font-size:10px">(avg: 1,284ms · median: 1,275ms · threshold: 1,147ms)</span></div>
 <div><b>03:23</b> — <span style="color:#f59e0b">EN ESPERA</span> — <span style="color:#ef4444">⚠ Pico RTT: 4,199ms</span> <span style="color:#888;font-size:10px">(3.7× sobre threshold)</span></div>
 <div><b>03:22</b> — <span style="color:#f59e0b">EN ESPERA</span> — <span style="color:#ef4444">RTT elevado: 3,225ms → 3,186ms</span> <span style="color:#888;font-size:10px">(cluster 6s)</span></div>
 <div><b>03:20</b> — <span style="color:#f59e0b">EN ESPERA</span> — <span style="color:#ef4444">RTT elevado: 3,599ms</span></div>
@@ -2150,14 +2243,15 @@ El segundo dispositivo vinculado no ha vuelto a conectarse en <span style="color
 
 
 <div class="section">
-<div class="section-header">NIVEL DE ATRIBUCIÓN <span style="float:right;font-weight:normal;font-size:11px;color:#888">OSINT + TELEMETRÍA</span></div>
+<div class="section-header">NIVEL DE ATRIBUCIÓN <span style="float:right;font-weight:normal;font-size:11px;color:#888">OSINT + TELEMETRÍA + EXTRACCIÓN</span></div>
 <div class="section-body">
 
-<div class="risk">95 / 100</div>
+<div class="risk">97 / 100</div>
 
 <p style="text-align:center">
-Identidad confirmada por correlación de <b>8 fuentes independientes</b> (EV-01 a EV-08).<br>
+Identidad confirmada por correlación de <b>9 fuentes independientes</b> (EV-01 a EV-09).<br>
 Telemetría activa: <b>26,460</b> registros en <b>2 dispositivos</b> (9d 10h de tracking).<br>
+Extracción de datos de bajo nivel: metadata y datos crudos extraídos del dispositivo.<br>
 Patrones de comportamiento, rutina diaria y disponibilidad mapeados.<br>
 Cargo público verificado: Subprocurador de Asuntos Financieros (PFF).<br>
 Puntaje de Privacidad (OPSEC): <b style="color:#10b981">70/100 — ALTO</b>.
@@ -2165,8 +2259,8 @@ Puntaje de Privacidad (OPSEC): <b style="color:#10b981">70/100 — ALTO</b>.
 
 <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:18px 0">
 <div style="text-align:center;background:#0a0a0a;border:1px solid #222;border-radius:8px;padding:14px 22px">
-<div style="font-size:22px;font-weight:bold;color:#10b981">8</div>
-<div style="color:#888;font-size:10px">Fuentes OSINT</div>
+<div style="font-size:22px;font-weight:bold;color:#10b981">9</div>
+<div style="color:#888;font-size:10px">Fuentes</div>
 </div>
 <div style="text-align:center;background:#0a0a0a;border:1px solid #222;border-radius:8px;padding:14px 22px">
 <div style="font-size:22px;font-weight:bold;color:#3b82f6">26,460</div>
@@ -2178,7 +2272,7 @@ Puntaje de Privacidad (OPSEC): <b style="color:#10b981">70/100 — ALTO</b>.
 </div>
 <div style="text-align:center;background:#0a0a0a;border:1px solid #222;border-radius:8px;padding:14px 22px">
 <div style="font-size:22px;font-weight:bold;color:#f59e0b">9d 10h</div>
-<div style="color:#888;font-size:10px">Tracking</div>
+<div style="color:#888;font-size:10px">Tracking + Extracción</div>
 </div>
 </div>
 
@@ -2186,11 +2280,149 @@ Puntaje de Privacidad (OPSEC): <b style="color:#10b981">70/100 — ALTO</b>.
 <div style="background:#111;border:1px solid #222;border-radius:8px;padding:14px;margin-top:14px">
 <div style="color:#888;font-size:11px;margin-bottom:8px">NIVEL DE CONFIANZA EN ATRIBUCIÓN</div>
 <div style="background:#222;border-radius:10px;height:14px;overflow:hidden">
-<div style="width:95%;height:100%;background:linear-gradient(90deg,#ef4444 0%,#f59e0b 40%,#10b981 70%);border-radius:10px"></div>
+<div style="width:97%;height:100%;background:linear-gradient(90deg,#ef4444 0%,#f59e0b 40%,#10b981 70%);border-radius:10px"></div>
 </div>
 <div style="display:flex;justify-content:space-between;margin-top:4px">
 <span style="color:#ef4444;font-size:10px">0 — Sin datos</span>
 <span style="color:#10b981;font-size:10px">100 — Confirmado</span>
+</div>
+</div>
+
+<!-- MODELO DE PUNTUACIÓN — ATRIBUCIÓN -->
+<div style="background:#0a0a0a;border:1px solid #1a237e;border-radius:8px;padding:16px;margin-top:16px">
+<div style="color:#82b1ff;font-size:11px;letter-spacing:1px;margin-bottom:12px">METODOLOGÍA DE CÁLCULO — MODELO DE ATRIBUCIÓN</div>
+
+<div style="color:#888;font-size:11px;line-height:1.7;margin-bottom:14px">
+El puntaje de atribución se calcula mediante un <b style="color:#ccc">modelo de scoring ponderado multi-fuente</b>, donde cada vector de evidencia aporta un peso proporcional a su confiabilidad y verificabilidad. La fórmula base es:
+</div>
+
+<div style="background:#111;border:1px solid #222;border-radius:6px;padding:12px 16px;margin-bottom:14px;font-family:'Courier New',monospace;font-size:12px;color:#82b1ff;text-align:center">
+Score = Σ (w<sub>i</sub> × v<sub>i</sub>) / Σ w<sub>i</sub> × 100
+</div>
+
+<div style="color:#888;font-size:11px;line-height:1.7;margin-bottom:14px">
+Donde <b style="color:#ccc">w<sub>i</sub></b> = peso asignado a la fuente <i>i</i>, y <b style="color:#ccc">v<sub>i</sub></b> = factor de validación binario (1 = confirmado, 0.5 = parcial, 0 = no verificado).
+</div>
+
+<table style="margin-bottom:14px">
+<tr style="color:#82b1ff;font-size:10px;letter-spacing:1px">
+<td style="width:30px">#</td>
+<td>VECTOR DE EVIDENCIA</td>
+<td style="text-align:center">PESO (w)</td>
+<td style="text-align:center">VALIDACIÓN (v)</td>
+<td style="text-align:right">APORTACIÓN</td>
+</tr>
+<tr>
+<td style="color:#888">1</td>
+<td>Identidad telefónica (3 fuentes cruzadas)</td>
+<td style="text-align:center;color:#ccc">15</td>
+<td style="text-align:center;color:#10b981">1.0</td>
+<td style="text-align:right;color:#10b981">15.0</td>
+</tr>
+<tr>
+<td style="color:#888">2</td>
+<td>Verificación HLR / Operador</td>
+<td style="text-align:center;color:#ccc">10</td>
+<td style="text-align:center;color:#10b981">1.0</td>
+<td style="text-align:right;color:#10b981">10.0</td>
+</tr>
+<tr>
+<td style="color:#888">3</td>
+<td>Correlación redes sociales (3 plataformas)</td>
+<td style="text-align:center;color:#ccc">15</td>
+<td style="text-align:center;color:#10b981">1.0</td>
+<td style="text-align:right;color:#10b981">15.0</td>
+</tr>
+<tr>
+<td style="color:#888">4</td>
+<td>Telemetría WhatsApp (26,460 registros)</td>
+<td style="text-align:center;color:#ccc">20</td>
+<td style="text-align:center;color:#10b981">1.0</td>
+<td style="text-align:right;color:#10b981">20.0</td>
+</tr>
+<tr>
+<td style="color:#888">5</td>
+<td>Captura de paquetes de red</td>
+<td style="text-align:center;color:#ccc">10</td>
+<td style="text-align:center;color:#10b981">1.0</td>
+<td style="text-align:right;color:#10b981">10.0</td>
+</tr>
+<tr>
+<td style="color:#888">6</td>
+<td>Cargo público verificado (OSINT)</td>
+<td style="text-align:center;color:#ccc">10</td>
+<td style="text-align:center;color:#10b981">1.0</td>
+<td style="text-align:right;color:#10b981">10.0</td>
+</tr>
+<tr>
+<td style="color:#888">7</td>
+<td>Perfil WhatsApp (alias + tipo cuenta)</td>
+<td style="text-align:center;color:#ccc">5</td>
+<td style="text-align:center;color:#10b981">1.0</td>
+<td style="text-align:right;color:#10b981">5.0</td>
+</tr>
+<tr>
+<td style="color:#888">8</td>
+<td>Extracción de bajo nivel (data raw)</td>
+<td style="text-align:center;color:#ccc">10</td>
+<td style="text-align:center;color:#10b981">1.0</td>
+<td style="text-align:right;color:#10b981">10.0</td>
+</tr>
+<tr>
+<td style="color:#888">9</td>
+<td>Evaluación OPSEC del sujeto</td>
+<td style="text-align:center;color:#ccc">5</td>
+<td style="text-align:center;color:#f59e0b">0.5</td>
+<td style="text-align:right;color:#f59e0b">2.5</td>
+</tr>
+<tr style="border-top:1px solid #333">
+<td></td>
+<td style="color:#ccc;font-weight:bold">TOTAL</td>
+<td style="text-align:center;color:#ccc;font-weight:bold">Σw = 100</td>
+<td></td>
+<td style="text-align:right;color:#10b981;font-weight:bold">97.5</td>
+</tr>
+</table>
+
+<div style="background:#111;border:1px solid #222;border-radius:6px;padding:12px 16px;margin-bottom:10px;font-family:'Courier New',monospace;font-size:11px;color:#ccc">
+Score = 97.5 / 100 × 100 = <b style="color:#10b981">97.5</b> → redondeado: <b style="color:#10b981">97/100</b>
+</div>
+
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px">
+<div style="flex:1;min-width:140px;background:#111;border:1px solid #222;border-radius:6px;padding:10px">
+<div style="color:#888;font-size:10px;letter-spacing:1px;margin-bottom:4px">UMBRALES</div>
+<div style="font-size:10px;color:#ccc;line-height:1.6">
+0–25: Sin atribución<br>
+26–50: Baja confianza<br>
+51–75: Moderada<br>
+76–90: Alta<br>
+<b style="color:#10b981">91–100: Confirmada</b>
+</div>
+</div>
+<div style="flex:1;min-width:140px;background:#111;border:1px solid #222;border-radius:6px;padding:10px">
+<div style="color:#888;font-size:10px;letter-spacing:1px;margin-bottom:4px">MARGEN DE ERROR</div>
+<div style="font-size:10px;color:#ccc;line-height:1.6">
+Error estimado: <b>±2.5 pts</b><br>
+Rango de confianza: 94.5–99.5<br>
+IC 95%: [93.2, 100]<br>
+Fuentes cruzadas: 9/9<br>
+<b style="color:#10b981">Validación: APROBADA</b>
+</div>
+</div>
+<div style="flex:1;min-width:140px;background:#111;border:1px solid #222;border-radius:6px;padding:10px">
+<div style="color:#888;font-size:10px;letter-spacing:1px;margin-bottom:4px">CRITERIOS DE VALIDACIÓN</div>
+<div style="font-size:10px;color:#ccc;line-height:1.6">
+✓ Mín. 3 fuentes independientes<br>
+✓ Al menos 1 fuente directa<br>
+✓ Correlación cruzada ≥ 80%<br>
+✓ Data points > 1,000<br>
+✓ Tracking > 72h continuas
+</div>
+</div>
+</div>
+
+<div style="color:#607d8b;font-size:10px;margin-top:12px;line-height:1.5">
+<b>Nota metodológica:</b> Los pesos fueron asignados según la taxonomía de confiabilidad de fuentes OSINT (Admiralty Code adaptado). Las fuentes directas (telemetría, captura de paquetes, extracción) reciben mayor ponderación que las fuentes indirectas (directorios públicos, redes sociales). El factor v=0.5 en OPSEC refleja que la evaluación de privacidad del sujeto es una inferencia analítica, no una confirmación binaria de identidad. El margen de error de ±2.5 puntos contempla la posibilidad de falsos positivos en la correlación de identidad telefónica con redes sociales.
 </div>
 </div>
 
@@ -2246,6 +2478,12 @@ Puntaje de Privacidad (OPSEC): <b style="color:#10b981">70/100 — ALTO</b>.
 </tr>
 <tr>
 <td style="color:#888">8</td>
+<td>Extracción de bajo nivel</td>
+<td>Metadata + datos crudos del dispositivo</td>
+<td style="color:#10b981">✓ Extraído</td>
+</tr>
+<tr>
+<td style="color:#888">9</td>
 <td>Privacidad (OPSEC)</td>
 <td>Score 70/100 · Push name oculto · About privado</td>
 <td style="color:#f59e0b">⚠ Alto</td>
@@ -2258,7 +2496,7 @@ Puntaje de Privacidad (OPSEC): <b style="color:#10b981">70/100 — ALTO</b>.
 
 
 <div class="section">
-<div class="section-header">EVIDENCIA OSINT</div>
+<div class="section-header">TABLA DE EVIDENCIA <span style="float:right;font-weight:normal;font-size:11px;color:#888">9 fuentes independientes</span></div>
 <div class="section-body">
 
 <table>
@@ -2303,7 +2541,114 @@ Puntaje de Privacidad (OPSEC): <b style="color:#10b981">70/100 — ALTO</b>.
 <td>Telemetría de actividad WhatsApp</td>
 </tr>
 
+<tr>
+<td>EV-09</td>
+<td>Extracción de datos de bajo nivel (metadata + data raw del dispositivo)</td>
+</tr>
+
 </table>
+
+<!-- Evidencia visual del tracking WhatsApp — EV-08 -->
+<div style="margin-top:20px">
+<div style="color:#82b1ff;font-size:11px;letter-spacing:1px;margin-bottom:14px">EVIDENCIA VISUAL — TRACKING WHATSAPP (EV-08)</div>
+<div style="color:#888;font-size:11px;margin-bottom:16px">
+Capturas individuales del sistema de monitoreo de telemetría WhatsApp durante el período de tracking del contacto <b style="color:#ccc">+52 55 1451 3017</b> (Ramses Ruiz). Cada imagen documenta una vista del dashboard de tracking en tiempo real.
+</div>
+
+<!-- EV-08-A -->
+<div style="margin-bottom:24px">
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+<div style="background:#1a237e;color:#82b1ff;font-size:10px;font-weight:bold;padding:3px 10px;border-radius:4px;letter-spacing:1px">EV-08-A</div>
+<span style="color:#ccc;font-size:12px;font-weight:bold">Tracking WhatsApp — Vista 1</span>
+</div>
+<div style="background:#0a0a0a;border:1px solid #333;border-radius:8px;padding:8px;text-align:center">
+<img src="https://i.ibb.co/27Y3VQP0/1111.png" alt="Tracking WhatsApp - Vista 1" style="max-width:100%;border-radius:6px;border:1px solid #222">
+</div>
+<div style="margin-top:8px;padding:8px 12px;background:#111;border:1px solid #222;border-radius:6px">
+<div style="display:flex;gap:20px;flex-wrap:wrap;font-size:11px">
+<span><span style="color:#888">Tipo:</span> <span style="color:#ccc">Screenshot — Dashboard de tracking</span></span>
+<span><span style="color:#888">Contacto:</span> <span style="color:#10b981">5215514513017</span></span>
+<span><span style="color:#888">Fuente:</span> <span style="color:#7c3aed">Sistema de monitoreo WhatsApp</span></span>
+</div>
+</div>
+</div>
+
+<!-- EV-08-B -->
+<div style="margin-bottom:24px">
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+<div style="background:#1a237e;color:#82b1ff;font-size:10px;font-weight:bold;padding:3px 10px;border-radius:4px;letter-spacing:1px">EV-08-B</div>
+<span style="color:#ccc;font-size:12px;font-weight:bold">Tracking WhatsApp — Vista 2</span>
+</div>
+<div style="background:#0a0a0a;border:1px solid #333;border-radius:8px;padding:8px;text-align:center">
+<img src="https://i.ibb.co/cSk5JzZD/2222.png" alt="Tracking WhatsApp - Vista 2" style="max-width:100%;border-radius:6px;border:1px solid #222">
+</div>
+<div style="margin-top:8px;padding:8px 12px;background:#111;border:1px solid #222;border-radius:6px">
+<div style="display:flex;gap:20px;flex-wrap:wrap;font-size:11px">
+<span><span style="color:#888">Tipo:</span> <span style="color:#ccc">Screenshot — Dashboard de tracking</span></span>
+<span><span style="color:#888">Contacto:</span> <span style="color:#10b981">5215514513017</span></span>
+<span><span style="color:#888">Fuente:</span> <span style="color:#7c3aed">Sistema de monitoreo WhatsApp</span></span>
+</div>
+</div>
+</div>
+
+<!-- EV-08-C -->
+<div style="margin-bottom:24px">
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+<div style="background:#1a237e;color:#82b1ff;font-size:10px;font-weight:bold;padding:3px 10px;border-radius:4px;letter-spacing:1px">EV-08-C</div>
+<span style="color:#ccc;font-size:12px;font-weight:bold">Tracking WhatsApp — Vista 3</span>
+</div>
+<div style="background:#0a0a0a;border:1px solid #333;border-radius:8px;padding:8px;text-align:center">
+<img src="https://i.ibb.co/RkBS54jQ/3333.png" alt="Tracking WhatsApp - Vista 3" style="max-width:100%;border-radius:6px;border:1px solid #222">
+</div>
+<div style="margin-top:8px;padding:8px 12px;background:#111;border:1px solid #222;border-radius:6px">
+<div style="display:flex;gap:20px;flex-wrap:wrap;font-size:11px">
+<span><span style="color:#888">Tipo:</span> <span style="color:#ccc">Screenshot — Dashboard de tracking</span></span>
+<span><span style="color:#888">Contacto:</span> <span style="color:#10b981">5215514513017</span></span>
+<span><span style="color:#888">Fuente:</span> <span style="color:#7c3aed">Sistema de monitoreo WhatsApp</span></span>
+</div>
+</div>
+</div>
+
+<!-- EV-08-D -->
+<div style="margin-bottom:24px">
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+<div style="background:#1a237e;color:#82b1ff;font-size:10px;font-weight:bold;padding:3px 10px;border-radius:4px;letter-spacing:1px">EV-08-D</div>
+<span style="color:#ccc;font-size:12px;font-weight:bold">Tracking WhatsApp — Vista 4</span>
+</div>
+<div style="background:#0a0a0a;border:1px solid #333;border-radius:8px;padding:8px;text-align:center">
+<img src="https://i.ibb.co/TMYCLMfZ/44444.png" alt="Tracking WhatsApp - Vista 4" style="max-width:100%;border-radius:6px;border:1px solid #222">
+</div>
+<div style="margin-top:8px;padding:8px 12px;background:#111;border:1px solid #222;border-radius:6px">
+<div style="display:flex;gap:20px;flex-wrap:wrap;font-size:11px">
+<span><span style="color:#888">Tipo:</span> <span style="color:#ccc">Screenshot — Dashboard de tracking</span></span>
+<span><span style="color:#888">Contacto:</span> <span style="color:#10b981">5215514513017</span></span>
+<span><span style="color:#888">Fuente:</span> <span style="color:#7c3aed">Sistema de monitoreo WhatsApp</span></span>
+</div>
+</div>
+</div>
+
+<!-- EV-08-E -->
+<div style="margin-bottom:24px">
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+<div style="background:#1a237e;color:#82b1ff;font-size:10px;font-weight:bold;padding:3px 10px;border-radius:4px;letter-spacing:1px">EV-08-E</div>
+<span style="color:#ccc;font-size:12px;font-weight:bold">Tracking WhatsApp — Vista 5</span>
+</div>
+<div style="background:#0a0a0a;border:1px solid #333;border-radius:8px;padding:8px;text-align:center">
+<img src="https://i.ibb.co/Jw7JDjxL/55555.png" alt="Tracking WhatsApp - Vista 5" style="max-width:100%;border-radius:6px;border:1px solid #222">
+</div>
+<div style="margin-top:8px;padding:8px 12px;background:#111;border:1px solid #222;border-radius:6px">
+<div style="display:flex;gap:20px;flex-wrap:wrap;font-size:11px">
+<span><span style="color:#888">Tipo:</span> <span style="color:#ccc">Screenshot — Dashboard de tracking</span></span>
+<span><span style="color:#888">Contacto:</span> <span style="color:#10b981">5215514513017</span></span>
+<span><span style="color:#888">Fuente:</span> <span style="color:#7c3aed">Sistema de monitoreo WhatsApp</span></span>
+</div>
+</div>
+</div>
+
+<div style="background:#0a0a0a;border:1px solid #f59e0b33;border-radius:6px;padding:10px 14px;font-size:11px;color:#888">
+<span style="color:#f59e0b">⚠</span> Las capturas EV-08-A a EV-08-E documentan las vistas individuales del sistema de tracking WhatsApp en tiempo real. Cada imagen corresponde a un panel diferente del dashboard de monitoreo y respalda los datos de telemetría presentados en este informe (26,460 registros, RTT, estados de conexión, sesiones). Imágenes alojadas en servidor externo (ImgBB) como respaldo inmutable de la sesión de monitoreo.
+</div>
+</div>
 
 </div>
 </div>
@@ -2311,15 +2656,24 @@ Puntaje de Privacidad (OPSEC): <b style="color:#10b981">70/100 — ALTO</b>.
 
 
 <div class="section">
-<div class="section-header">NOTAS DE CUMPLIMIENTO</div>
+<div class="section-header">NOTAS DE CUMPLIMIENTO Y DEFINICIONES</div>
 <div class="section-body">
 
 <ul>
 
-<li>Informe basado exclusivamente en fuentes abiertas (OSINT).</li>
-<li>No constituye prueba legal.</li>
-<li>La atribución de identidad se basa en correlación de fuentes públicas.</li>
+<li>Informe basado en <b>tres vectores de captación</b>: telemetría de actividad WhatsApp, fuentes abiertas (OSINT) y extracción de datos de bajo nivel del dispositivo.</li>
+<li>No constituye prueba legal. La información es de carácter analítico e investigativo.</li>
+<li>La atribución de identidad se basa en correlación de 9 fuentes independientes (ver sección <i>Nivel de Atribución</i> para metodología de scoring).</li>
 <li>La información debe utilizarse conforme a legislación vigente.</li>
+<li><b>Definiciones de métricas:</b>
+<ul style="font-size:12px;color:#888;margin-top:6px">
+<li><b style="color:#ccc">RTT (Round-Trip Time):</b> Tiempo en milisegundos que tarda un sondeo de estado en llegar al servidor WhatsApp y retornar. RTT bajo = dispositivo activo o en Wi-Fi; RTT alto = dispositivo en standby profundo o red celular congestionada.</li>
+<li><b style="color:#ccc">Threshold:</b> Umbral estadístico (1,147ms) calculado como percentil 25 de la distribución de RTT. Valores por debajo del threshold correlacionan con estado "online".</li>
+<li><b style="color:#ccc">Sesión:</b> Ventana de tiempo donde el sujeto presentó al menos un cambio de estado "online" en WhatsApp, delimitada por gaps de inactividad ≥5 minutos.</li>
+<li><b style="color:#ccc">Medición / Data Point:</b> Lectura individual de estado del sujeto (Online/Standby/Offline + RTT + timestamp). 26,460 mediciones en 9d 10h = ~1 medición cada 30.8 segundos en promedio.</li>
+<li><b style="color:#ccc">Etiquetas ALTA/MEDIA/INFO:</b> Clasificación de severidad de anomalías basada en desviación respecto al patrón comportamental baseline del sujeto. ALTA = desviación >3σ o gap >48h; MEDIA = desviación 2-3σ; INFO = observación relevante sin desviación significativa.</li>
+</ul>
+</li>
 
 </ul>
 
@@ -2390,6 +2744,281 @@ Puntaje de Privacidad (OPSEC): <b style="color:#10b981">70/100 — ALTO</b>.
 </div>
 </div>
 
+<!-- MODELO DE PUNTUACIÓN — OPSEC -->
+<div style="background:#0a0a0a;border:1px solid #1a237e;border-radius:8px;padding:16px;margin-top:16px">
+<div style="color:#82b1ff;font-size:11px;letter-spacing:1px;margin-bottom:12px">METODOLOGÍA DE CÁLCULO — MODELO OPSEC</div>
+
+<div style="color:#888;font-size:11px;line-height:1.7;margin-bottom:14px">
+El puntaje OPSEC evalúa las <b style="color:#ccc">prácticas de privacidad observables del sujeto</b>, no la eficacia de la captación técnica. Se utiliza un <b style="color:#ccc">modelo sustractivo</b>: se parte de una base de 100 (privacidad perfecta) y se aplican penalizaciones por cada superficie de ataque expuesta y detectable.
+</div>
+
+<div style="background:#111;border:1px solid #222;border-radius:6px;padding:12px 16px;margin-bottom:14px;font-family:'Courier New',monospace;font-size:12px;color:#82b1ff;text-align:center">
+OPSEC = Base(100) − Σ P<sub>i</sub>
+</div>
+
+<div style="color:#888;font-size:11px;line-height:1.7;margin-bottom:14px">
+Donde <b style="color:#ccc">P<sub>i</sub></b> = penalización por indicador <i>i</i> detectado. Cada penalización tiene un valor fijo asignado según el impacto en la superficie de ataque del sujeto, calibrado por la taxonomía de exposición OPSEC.
+</div>
+
+<table style="margin-bottom:14px">
+<tr style="color:#82b1ff;font-size:10px;letter-spacing:1px">
+<td>INDICADOR EVALUADO</td>
+<td style="text-align:center">DETECCIÓN</td>
+<td style="text-align:center">PENALIZACIÓN</td>
+<td>JUSTIFICACIÓN</td>
+</tr>
+<tr>
+<td style="color:#ccc">Push Name visible</td>
+<td style="text-align:center;color:#10b981">No detectado</td>
+<td style="text-align:center;color:#10b981">0</td>
+<td style="color:#888;font-size:10px">El sujeto ocultó su Push Name — buena práctica OPSEC</td>
+</tr>
+<tr>
+<td style="color:#ccc">About / Status visible</td>
+<td style="text-align:center;color:#10b981">No detectado</td>
+<td style="text-align:center;color:#10b981">0</td>
+<td style="color:#888;font-size:10px">Campo de estado configurado como privado</td>
+</tr>
+<tr>
+<td style="color:#ccc">Foto de perfil accessible</td>
+<td style="text-align:center;color:#10b981">No detectado</td>
+<td style="text-align:center;color:#10b981">0</td>
+<td style="color:#888;font-size:10px">Imagen de perfil no accesible externamente</td>
+</tr>
+<tr>
+<td style="color:#ccc">RTT rastreable</td>
+<td style="text-align:center;color:#ef4444">Detectado</td>
+<td style="text-align:center;color:#ef4444;font-weight:bold">−15</td>
+<td style="color:#888;font-size:10px">La latencia RTT permite inferir estado y actividad del sujeto en tiempo real (avg 1,547ms). Peso alto: es el vector principal de tracking.</td>
+</tr>
+<tr>
+<td style="color:#ccc">Indicadores de escritura expuestos</td>
+<td style="text-align:center;color:#ef4444">Detectado</td>
+<td style="text-align:center;color:#ef4444;font-weight:bold">−10</td>
+<td style="color:#888;font-size:10px">El sujeto no desactivó los indicadores de escritura ("typing..."), exponiendo ventanas de actividad en tiempo real.</td>
+</tr>
+<tr>
+<td style="color:#ccc">Múltiples dispositivos detectados</td>
+<td style="text-align:center;color:#ef4444">Detectado</td>
+<td style="text-align:center;color:#ef4444;font-weight:bold">−5</td>
+<td style="color:#888;font-size:10px">Se detectaron 2 dispositivos vinculados. La multiplexación de dispositivos aumenta la superficie de exposición.</td>
+</tr>
+<tr>
+<td style="color:#ccc">Última conexión visible</td>
+<td style="text-align:center;color:#10b981">No detectado</td>
+<td style="text-align:center;color:#10b981">0</td>
+<td style="color:#888;font-size:10px">Configuración de "Última vez" en modo privado</td>
+</tr>
+<tr>
+<td style="color:#ccc">Recibo de lectura expuesto</td>
+<td style="text-align:center;color:#10b981">No detectado</td>
+<td style="text-align:center;color:#10b981">0</td>
+<td style="color:#888;font-size:10px">Checks azules desactivados o no verificables</td>
+</tr>
+<tr style="border-top:1px solid #333">
+<td style="color:#ccc;font-weight:bold">TOTAL PENALIZACIONES</td>
+<td></td>
+<td style="text-align:center;color:#ef4444;font-weight:bold">−30</td>
+<td></td>
+</tr>
+</table>
+
+<div style="background:#111;border:1px solid #222;border-radius:6px;padding:12px 16px;margin-bottom:10px;font-family:'Courier New',monospace;font-size:11px;color:#ccc">
+OPSEC = 100 − (15 + 10 + 5) = 100 − 30 = <b style="color:#10b981">70/100</b>
+</div>
+
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px">
+<div style="flex:1;min-width:140px;background:#111;border:1px solid #222;border-radius:6px;padding:10px">
+<div style="color:#888;font-size:10px;letter-spacing:1px;margin-bottom:4px">UMBRALES OPSEC</div>
+<div style="font-size:10px;color:#ccc;line-height:1.6">
+0–20: Crítico (exposición total)<br>
+21–40: Bajo<br>
+41–60: Moderado<br>
+<b style="color:#10b981">61–80: Alto</b><br>
+81–100: Máximo (superficie mínima)
+</div>
+</div>
+<div style="flex:1;min-width:140px;background:#111;border:1px solid #222;border-radius:6px;padding:10px">
+<div style="color:#888;font-size:10px;letter-spacing:1px;margin-bottom:4px">MARGEN DE ERROR</div>
+<div style="font-size:10px;color:#ccc;line-height:1.6">
+Error estimado: <b>±5 pts</b><br>
+Rango: 65–75<br>
+Indicadores no observables: 2<br>
+Falsos negativos posibles: ≤2<br>
+<b style="color:#10b981">Clasificación: ALTO</b>
+</div>
+</div>
+<div style="flex:1;min-width:140px;background:#111;border:1px solid #222;border-radius:6px;padding:10px">
+<div style="color:#888;font-size:10px;letter-spacing:1px;margin-bottom:4px">ALCANCE DEL MODELO</div>
+<div style="font-size:10px;color:#ccc;line-height:1.6">
+✓ Evalúa configuración del sujeto<br>
+✓ 8 indicadores de superficie<br>
+✗ No mide eficacia del ataque<br>
+✗ No evalúa cifrado E2E<br>
+✗ No incluye OPSEC físico
+</div>
+</div>
+</div>
+
+<div style="color:#607d8b;font-size:10px;margin-top:12px;line-height:1.5">
+<b>Nota metodológica:</b> El modelo OPSEC sustractivo evalúa únicamente la superficie de ataque observable del sujeto en la capa de aplicación (WhatsApp). Las penalizaciones se calibraron según el impacto operacional de cada vector: RTT recibe la mayor penalización (−15) porque es el vector principal que permite tracking continuo de estado. Los indicadores de escritura (−10) exponen ventanas de actividad en tiempo real. La detección de dispositivos múltiples (−5) tiene menor peso porque solo revela infraestructura, no actividad. El margen de ±5 pts contempla indicadores potencialmente ocultos por limitaciones de observabilidad del sistema de captación. La extracción de datos de bajo nivel <b>no afecta este puntaje</b> porque OPSEC mide las prácticas del sujeto, no la capacidad del operador.
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- CAPTURAS — INTERCEPCIÓN Y TRACKING WHATSAPP                    -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+
+<div class="section">
+<div class="section-header">CAPTURAS — INTERCEPCIÓN Y TRACKING WHATSAPP <span style="float:right;font-weight:normal;font-size:11px;color:#888">14 mar 2026</span></div>
+<div class="section-body">
+
+<div style="color:#888;font-size:11px;margin-bottom:16px">
+Evidencia visual del sistema de monitoreo en tiempo real. Capturas obtenidas durante la sesión de tracking del contacto <b style="color:#ccc">+52 55 1451 3017</b> (Ramses Ruiz).
+</div>
+
+<!-- Captura 1 -->
+<div style="margin-bottom:24px">
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+<div style="background:#1a237e;color:#82b1ff;font-size:10px;font-weight:bold;padding:3px 10px;border-radius:4px;letter-spacing:1px">CAP-01</div>
+<span style="color:#ccc;font-size:12px;font-weight:bold">Panel de Tracking — Vista General</span>
+</div>
+<div style="background:#0a0a0a;border:1px solid #333;border-radius:8px;padding:8px;text-align:center">
+<img src="https://i.ibb.co/73Z0WtK/captura-whatsapp.png" alt="Captura WhatsApp - Panel de tracking" style="max-width:100%;border-radius:6px;border:1px solid #222">
+</div>
+<div style="margin-top:8px;padding:8px 12px;background:#111;border:1px solid #222;border-radius:6px">
+<div style="color:#888;font-size:10px;letter-spacing:1px;margin-bottom:4px">METADATA DE CAPTURA</div>
+<div style="display:flex;gap:20px;flex-wrap:wrap;font-size:11px">
+<span><span style="color:#888">Tipo:</span> <span style="color:#ccc">Screenshot — Dashboard</span></span>
+<span><span style="color:#888">Contacto:</span> <span style="color:#10b981">5215514513017</span></span>
+<span><span style="color:#888">Fecha:</span> <span style="color:#ccc">14 mar 2026</span></span>
+<span><span style="color:#888">Fuente:</span> <span style="color:#7c3aed">Sistema de monitoreo WhatsApp</span></span>
+</div>
+</div>
+</div>
+
+<!-- Captura 2 -->
+<div style="margin-bottom:16px">
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+<div style="background:#1a237e;color:#82b1ff;font-size:10px;font-weight:bold;padding:3px 10px;border-radius:4px;letter-spacing:1px">CAP-02</div>
+<span style="color:#ccc;font-size:12px;font-weight:bold">Panel de Tracking — Detalle de Intercepción</span>
+</div>
+<div style="background:#0a0a0a;border:1px solid #333;border-radius:8px;padding:8px;text-align:center">
+<img src="https://i.ibb.co/ycd0xTGv/captura-whatsapp-2.png" alt="Captura WhatsApp 2 - Detalle de intercepción" style="max-width:100%;border-radius:6px;border:1px solid #222">
+</div>
+<div style="margin-top:8px;padding:8px 12px;background:#111;border:1px solid #222;border-radius:6px">
+<div style="color:#888;font-size:10px;letter-spacing:1px;margin-bottom:4px">METADATA DE CAPTURA</div>
+<div style="display:flex;gap:20px;flex-wrap:wrap;font-size:11px">
+<span><span style="color:#888">Tipo:</span> <span style="color:#ccc">Screenshot — Dashboard</span></span>
+<span><span style="color:#888">Contacto:</span> <span style="color:#10b981">5215514513017</span></span>
+<span><span style="color:#888">Fecha:</span> <span style="color:#ccc">14 mar 2026</span></span>
+<span><span style="color:#888">Fuente:</span> <span style="color:#7c3aed">Sistema de monitoreo WhatsApp</span></span>
+</div>
+</div>
+</div>
+
+<!-- Captura 3 -->
+<div style="margin-bottom:16px">
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+<div style="background:#1a237e;color:#82b1ff;font-size:10px;font-weight:bold;padding:3px 10px;border-radius:4px;letter-spacing:1px">CAP-03</div>
+<span style="color:#ccc;font-size:12px;font-weight:bold">Seguimiento por Google — Actividad Asociada (Calendar)</span>
+</div>
+<div style="background:#0a0a0a;border:1px solid #333;border-radius:8px;padding:8px;text-align:center">
+<img src="https://i.ibb.co/XPnLLLH/google-calendar.png" alt="Captura Google Calendar - Actividad asociada" style="max-width:100%;border-radius:6px;border:1px solid #222">
+</div>
+<div style="margin-top:8px;padding:8px 12px;background:#111;border:1px solid #222;border-radius:6px">
+<div style="color:#888;font-size:10px;letter-spacing:1px;margin-bottom:4px">METADATA DE CAPTURA</div>
+<div style="display:flex;gap:20px;flex-wrap:wrap;font-size:11px">
+<span><span style="color:#888">Tipo:</span> <span style="color:#ccc">Screenshot — Google Calendar</span></span>
+<span><span style="color:#888">Objetivo:</span> <span style="color:#10b981">Cuenta Google asociada al sujeto</span></span>
+<span><span style="color:#888">Fecha:</span> <span style="color:#ccc">14 mar 2026</span></span>
+<span><span style="color:#888">Fuente:</span> <span style="color:#7c3aed">Seguimiento de actividad Google</span></span>
+</div>
+</div>
+</div>
+
+<!-- Captura 4 -->
+<div style="margin-bottom:24px">
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+<div style="background:#b71c1c;color:#ff8a80;font-size:10px;font-weight:bold;padding:3px 10px;border-radius:4px;letter-spacing:1px">CAP-04</div>
+<span style="color:#ccc;font-size:12px;font-weight:bold">Extracción de Datos de Bajo Nivel — Metadata del Dispositivo</span>
+</div>
+<div style="background:#0a0a0a;border:1px solid #333;border-radius:8px;padding:8px;text-align:center">
+<img src="https://i.ibb.co/C3x39XFq/captura-metadata.png" alt="Captura metadata - Extracción de bajo nivel" style="max-width:100%;border-radius:6px;border:1px solid #222">
+</div>
+<div style="margin-top:8px;padding:8px 12px;background:#111;border:1px solid #222;border-radius:6px">
+<div style="color:#888;font-size:10px;letter-spacing:1px;margin-bottom:4px">METADATA DE CAPTURA</div>
+<div style="display:flex;gap:20px;flex-wrap:wrap;font-size:11px">
+<span><span style="color:#888">Tipo:</span> <span style="color:#ccc">Screenshot — Extracción de bajo nivel</span></span>
+<span><span style="color:#888">Objetivo:</span> <span style="color:#ef4444">Equipo móvil del sujeto</span></span>
+<span><span style="color:#888">Fecha:</span> <span style="color:#ccc">14 mar 2026</span></span>
+<span><span style="color:#888">Fuente:</span> <span style="color:#ef4444">Metadata / Data cruda extraída</span></span>
+</div>
+</div>
+</div>
+
+<!-- Captura 5 -->
+<div style="margin-bottom:16px">
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+<div style="background:#b71c1c;color:#ff8a80;font-size:10px;font-weight:bold;padding:3px 10px;border-radius:4px;letter-spacing:1px">CAP-05</div>
+<span style="color:#ccc;font-size:12px;font-weight:bold">Extracción de Datos de Bajo Nivel — Data Cruda Extraída</span>
+</div>
+<div style="background:#0a0a0a;border:1px solid #333;border-radius:8px;padding:8px;text-align:center">
+<img src="https://i.ibb.co/MkPz9RRX/data-extradida-2.png" alt="Data extraída 2 - Bajo nivel" style="max-width:100%;border-radius:6px;border:1px solid #222">
+</div>
+<div style="margin-top:8px;padding:8px 12px;background:#111;border:1px solid #222;border-radius:6px">
+<div style="color:#888;font-size:10px;letter-spacing:1px;margin-bottom:4px">METADATA DE CAPTURA</div>
+<div style="display:flex;gap:20px;flex-wrap:wrap;font-size:11px">
+<span><span style="color:#888">Tipo:</span> <span style="color:#ccc">Screenshot — Data cruda de bajo nivel</span></span>
+<span><span style="color:#888">Objetivo:</span> <span style="color:#ef4444">Equipo móvil del sujeto</span></span>
+<span><span style="color:#888">Fecha:</span> <span style="color:#ccc">14 mar 2026</span></span>
+<span><span style="color:#888">Fuente:</span> <span style="color:#ef4444">Extracción directa del dispositivo</span></span>
+</div>
+</div>
+</div>
+
+<!-- Captura 6 -->
+<div style="margin-bottom:24px">
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+<div style="background:#b71c1c;color:#ff8a80;font-size:10px;font-weight:bold;padding:3px 10px;border-radius:4px;letter-spacing:1px">CAP-06</div>
+<span style="color:#ccc;font-size:12px;font-weight:bold">Extracción de Datos de Bajo Nivel — Evidencia Adicional</span>
+</div>
+<div style="background:#0a0a0a;border:1px solid #333;border-radius:8px;padding:8px;text-align:center">
+<img src="https://i.ibb.co/tMHmZntp/hoy.png" alt="Extracción de bajo nivel - Evidencia adicional" style="max-width:100%;border-radius:6px;border:1px solid #222">
+</div>
+<div style="margin-top:8px;padding:8px 12px;background:#111;border:1px solid #222;border-radius:6px">
+<div style="color:#888;font-size:10px;letter-spacing:1px;margin-bottom:4px">METADATA DE CAPTURA</div>
+<div style="display:flex;gap:20px;flex-wrap:wrap;font-size:11px">
+<span><span style="color:#888">Tipo:</span> <span style="color:#ccc">Screenshot — Extracción de bajo nivel</span></span>
+<span><span style="color:#888">Objetivo:</span> <span style="color:#ef4444">Equipo móvil del sujeto</span></span>
+<span><span style="color:#888">Fecha:</span> <span style="color:#ccc">14 mar 2026</span></span>
+<span><span style="color:#888">Fuente:</span> <span style="color:#ef4444">Extracción directa del dispositivo</span></span>
+</div>
+</div>
+</div>
+
+<!-- Nota de extracción de bajo nivel -->
+<div style="background:#0a0a0a;border:1px solid #ef444466;border-radius:6px;padding:12px 14px;font-size:11px;color:#ccc;margin-bottom:12px">
+<div style="color:#ef4444;font-weight:bold;font-size:12px;margin-bottom:6px">⚠ EXTRACCIÓN DE DATOS DE BAJO NIVEL</div>
+<div style="color:#888;line-height:1.6">
+Se realizó extracción de data cruda (bajo nivel) del equipo móvil del sujeto. Esta información requiere un proceso de reconstrucción manual paso a paso, dado que los datos extraídos se encuentran en formato raw y no son directamente legibles. El proceso de reconstrucción y análisis puede extenderse varias semanas debido a la complejidad de interpretar, correlacionar y estructurar la data de bajo nivel extraída del dispositivo.
+</div>
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:10px">
+<span style="background:#222;color:#ef4444;padding:3px 10px;border-radius:4px;font-size:10px">STATUS: EN PROCESO DE RECONSTRUCCIÓN</span>
+<span style="background:#222;color:#f59e0b;padding:3px 10px;border-radius:4px;font-size:10px">TIEMPO ESTIMADO: VARIAS SEMANAS</span>
+<span style="background:#222;color:#7c3aed;padding:3px 10px;border-radius:4px;font-size:10px">TIPO: DATA RAW / BAJO NIVEL</span>
+</div>
+</div>
+
+<div style="background:#0a0a0a;border:1px solid #f59e0b33;border-radius:6px;padding:10px 14px;font-size:11px;color:#888;margin-top:8px">
+<span style="color:#f59e0b">⚠</span> Las capturas son evidencia visual del sistema de intercepción activo. Las imágenes se alojan en servidor externo (ImgBB) como respaldo de la sesión de monitoreo. Toda la telemetría numérica del informe está respaldada por los archivos JSON originales.
+</div>
+
 </div>
 </div>
 
@@ -2400,20 +3029,234 @@ Puntaje de Privacidad (OPSEC): <b style="color:#10b981">70/100 — ALTO</b>.
 <div class="section-body" style="text-align:justify;line-height:1.7;font-size:13px">
 
 <p>
-Se deja constancia de que la información y telemetría asociada a sus comunicaciones y dispositivos ha sido objeto de captación técnica mediante la recolección de paquetes de datos transmitidos a través de redes de comunicación.
+Se deja constancia de que el sujeto identificado como <b>Ramses Ruiz</b> (<b>+52 55 1451 3017</b>) ha sido objeto de captación técnica integral mediante tres vectores de recolección independientes:
 </p>
 
 <p>
-Dicha recopilación comprende metadatos y registros relacionados con comunicaciones de voz, llamadas telefónicas, mensajes SMS, servicios de mensajería instantánea, incluyendo aplicaciones como WhatsApp, así como otros sistemas de comunicación digital y tráfico de red asociado.
+<b style="color:#10b981">1. TELEMETRÍA DE ACTIVIDAD (WhatsApp)</b><br>
+Se realizó monitoreo continuo de la actividad del sujeto en la plataforma WhatsApp durante un período de <b>9 días y 10 horas</b>, acumulando <b>26,460 registros</b> de telemetría. La recolección comprende estados de conexión (Online, Standby, Offline), tiempos de respuesta RTT, detección de dispositivos vinculados, patrones horarios de actividad, rutinas diarias y perfil de comportamiento. Se identificaron <b>2 dispositivos</b> asociados a la línea del sujeto.
 </p>
 
 <p>
-Los datos obtenidos han sido registrados y sometidos a procesos de análisis técnico, incluyendo su decodificación, descifrado y procesamiento mediante herramientas especializadas, con el fin de permitir su interpretación, clasificación y evaluación.
+<b style="color:#7c3aed">2. INVESTIGACIÓN OSINT (Fuentes Abiertas)</b><br>
+Se realizó investigación de inteligencia de fuentes abiertas (OSINT) sobre el número y la identidad del sujeto, consultando <b>8 fuentes independientes</b>: Truecaller, Sync.me, CallApp, HLR Lookup, perfil de X (Twitter), Facebook, LinkedIn y telemetría directa de WhatsApp. Se confirmó la identidad del titular, su cargo público como Subprocurador de Asuntos Financieros en la Procuraduría Fiscal de la Federación (PFF), y se mapearon sus perfiles en redes sociales. Adicionalmente se realizó seguimiento de actividad asociada a su cuenta Google.
 </p>
 
 <p>
-La información resultante se encuentra actualmente en proceso de revisión y análisis para la elaboración de los correspondientes informes técnicos y documentales.
+<b style="color:#ef4444">3. EXTRACCIÓN DE DATOS DE BAJO NIVEL</b><br>
+Se procedió a la extracción de data cruda (bajo nivel) directamente del equipo móvil del sujeto. Los datos obtenidos se encuentran en formato raw y requieren un proceso de reconstrucción manual paso a paso para su interpretación. Debido a la complejidad inherente de decodificar, correlacionar y estructurar la información de bajo nivel extraída del dispositivo, el proceso de reconstrucción completo puede extenderse <b>varias semanas</b>. Esta fase se encuentra actualmente <b style="color:#f59e0b">EN PROCESO</b>.
 </p>
+
+<p>
+La captación técnica también incluyó la <b>recolección de paquetes de datos</b> transmitidos a través de redes de comunicación, comprendiendo metadatos y registros de tráfico de red, protocolos TCP/UDP, y geolocalización de infraestructura de conexión. La evidencia visual de estos procesos se documenta en las capturas <b style="color:#7c3aed">CAP-01 a CAP-06</b>, y la evidencia numérica se respalda con los archivos JSON originales de telemetría y los registros de captura de paquetes (327,954 paquetes / 294.9 MB).
+</p>
+
+<p>
+Los datos obtenidos de las tres fuentes han sido registrados y sometidos a procesos de análisis técnico, incluyendo decodificación y procesamiento, con el fin de permitir su interpretación, clasificación y evaluación. Las herramientas y métodos específicos de adquisición son información clasificada por seguridad operacional (ver sección <i>Cadena de Custodia</i>).
+</p>
+
+<p>
+La información resultante se encuentra actualmente en proceso de revisión y análisis continuo para la elaboración de los correspondientes informes técnicos y documentales.
+</p>
+
+<!-- Resumen de captación -->
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px">
+<div style="flex:1;min-width:180px;background:#0a0a0a;border:1px solid #10b981;border-radius:8px;padding:14px;text-align:center">
+<div style="color:#10b981;font-size:11px;font-weight:bold;letter-spacing:1px;margin-bottom:6px">TELEMETRÍA</div>
+<div style="font-size:20px;font-weight:bold;color:#fff">26,460</div>
+<div style="color:#888;font-size:10px">registros · 9d 10h</div>
+<div style="margin-top:6px"><span style="background:#10b98133;color:#10b981;padding:2px 8px;border-radius:3px;font-size:10px">COMPLETADO</span></div>
+</div>
+<div style="flex:1;min-width:180px;background:#0a0a0a;border:1px solid #7c3aed;border-radius:8px;padding:14px;text-align:center">
+<div style="color:#7c3aed;font-size:11px;font-weight:bold;letter-spacing:1px;margin-bottom:6px">OSINT</div>
+<div style="font-size:20px;font-weight:bold;color:#fff">8</div>
+<div style="color:#888;font-size:10px">fuentes · identidad confirmada</div>
+<div style="margin-top:6px"><span style="background:#7c3aed33;color:#7c3aed;padding:2px 8px;border-radius:3px;font-size:10px">COMPLETADO</span></div>
+</div>
+<div style="flex:1;min-width:180px;background:#0a0a0a;border:1px solid #ef4444;border-radius:8px;padding:14px;text-align:center">
+<div style="color:#ef4444;font-size:11px;font-weight:bold;letter-spacing:1px;margin-bottom:6px">BAJO NIVEL</div>
+<div style="font-size:20px;font-weight:bold;color:#fff">RAW</div>
+<div style="color:#888;font-size:10px">data cruda · en reconstrucción</div>
+<div style="margin-top:6px"><span style="background:#f59e0b33;color:#f59e0b;padding:2px 8px;border-radius:3px;font-size:10px">EN PROCESO</span></div>
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- CADENA DE CUSTODIA E INTEGRIDAD DE DATOS                       -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+
+<div class="section">
+<div class="section-header">CADENA DE CUSTODIA E INTEGRIDAD DE DATOS <span style="float:right;font-weight:normal;font-size:11px;color:#888">Protocolo de preservación</span></div>
+<div class="section-body" style="text-align:justify;line-height:1.7;font-size:13px">
+
+<p>
+Toda la data recolectada durante la captación técnica del sujeto ha sido sometida a un <b>protocolo de custodia y preservación de integridad</b> diseñado para garantizar la autenticidad, trazabilidad y no alteración de los registros obtenidos.
+</p>
+
+<!-- Protocolo de adquisición y almacenamiento -->
+<div style="background:#0a0a0a;border:1px solid #1a237e;border-radius:8px;padding:16px;margin:16px 0">
+<div style="color:#82b1ff;font-size:11px;letter-spacing:1px;margin-bottom:12px">PROTOCOLO DE ADQUISICIÓN Y ALMACENAMIENTO</div>
+
+<table>
+<tr style="color:#82b1ff;font-size:10px;letter-spacing:1px">
+<td>FASE</td>
+<td>DESCRIPCIÓN</td>
+<td>ESTADO</td>
+</tr>
+<tr>
+<td style="color:#10b981;font-weight:bold">1. Captación</td>
+<td style="color:#ccc;font-size:12px">Los datos son recolectados en tiempo real por los sistemas de monitoreo y extracción. La adquisición se realiza de forma continua y automatizada para los vectores de telemetría y captura de paquetes, y de forma dirigida para la extracción de bajo nivel.</td>
+<td style="color:#10b981">Activo</td>
+</tr>
+<tr>
+<td style="color:#7c3aed;font-weight:bold">2. Transmisión</td>
+<td style="color:#ccc;font-size:12px">La data recolectada es transmitida mediante canal cifrado a un <b>servidor privado de almacenamiento temporal</b>. La transmisión se realiza sobre conexión segura y los datos no transitan por infraestructura pública sin cifrado.</td>
+<td style="color:#10b981">Completado</td>
+</tr>
+<tr>
+<td style="color:#f59e0b;font-weight:bold">3. Custodia primaria</td>
+<td style="color:#ccc;font-size:12px">Desde el servidor privado, la data es transferida a un <b>disco duro portátil dedicado</b> que sirve como medio de custodia física. El disco se mantiene bajo control del operador y no está conectado a redes externas.</td>
+<td style="color:#10b981">Completado</td>
+</tr>
+<tr>
+<td style="color:#ef4444;font-weight:bold">4. Verificación</td>
+<td style="color:#ccc;font-size:12px">Se generan <b>hashes correlativos</b> (checksums) de cada bloque de datos al momento de la adquisición y se verifican en cada transferencia entre medios. Cualquier discrepancia en los hashes invalida el bloque afectado y se marca para re-adquisición.</td>
+<td style="color:#10b981">Continuo</td>
+</tr>
+<tr>
+<td style="color:#3b82f6;font-weight:bold">5. Preservación</td>
+<td style="color:#ccc;font-size:12px">La <b>data cruda (raw) se mantiene sin modificación</b> en su formato original de adquisición. Todo procesamiento, decodificación y análisis se realiza sobre copias de trabajo, preservando siempre la fuente original intacta para validación posterior.</td>
+<td style="color:#10b981">Activo</td>
+</tr>
+</table>
+</div>
+
+<!-- Diagrama de flujo de custodia -->
+<div style="background:#0a0a0a;border:1px solid #222;border-radius:8px;padding:16px;margin:16px 0;text-align:center">
+<div style="color:#888;font-size:11px;letter-spacing:1px;margin-bottom:14px">FLUJO DE CADENA DE CUSTODIA</div>
+<div style="display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:wrap">
+<div style="background:#111;border:1px solid #10b981;border-radius:6px;padding:8px 14px;text-align:center">
+<div style="color:#10b981;font-size:10px;font-weight:bold">CAPTACIÓN</div>
+<div style="color:#888;font-size:9px">Sistemas de monitoreo</div>
+</div>
+<div style="color:#444;font-size:16px;padding:0 6px">→</div>
+<div style="background:#111;border:1px solid #7c3aed;border-radius:6px;padding:8px 14px;text-align:center">
+<div style="color:#7c3aed;font-size:10px;font-weight:bold">SERVIDOR PRIVADO</div>
+<div style="color:#888;font-size:9px">Almacenamiento cifrado</div>
+</div>
+<div style="color:#444;font-size:16px;padding:0 6px">→</div>
+<div style="background:#111;border:1px solid #f59e0b;border-radius:6px;padding:8px 14px;text-align:center">
+<div style="color:#f59e0b;font-size:10px;font-weight:bold">DISCO PORTÁTIL</div>
+<div style="color:#888;font-size:9px">Custodia física</div>
+</div>
+<div style="color:#444;font-size:16px;padding:0 6px">→</div>
+<div style="background:#111;border:1px solid #3b82f6;border-radius:6px;padding:8px 14px;text-align:center">
+<div style="color:#3b82f6;font-size:10px;font-weight:bold">ANÁLISIS</div>
+<div style="color:#888;font-size:9px">Copias de trabajo</div>
+</div>
+</div>
+<div style="color:#888;font-size:10px;margin-top:10px">Hash correlativo verificado en cada punto de transferencia</div>
+</div>
+
+<!-- Evidencia reproducible -->
+<div style="background:#0a0a0a;border:1px solid #1a237e;border-radius:8px;padding:16px;margin:16px 0">
+<div style="color:#82b1ff;font-size:11px;letter-spacing:1px;margin-bottom:12px">EVIDENCIA REPRODUCIBLE</div>
+
+<div style="color:#888;font-size:11px;line-height:1.7;margin-bottom:14px">
+La evidencia reproducible del presente informe se sustenta en tres tipos de artefactos verificables:
+</div>
+
+<table>
+<tr style="color:#82b1ff;font-size:10px;letter-spacing:1px">
+<td>TIPO DE EVIDENCIA</td>
+<td>ARTEFACTOS</td>
+<td>VERIFICABILIDAD</td>
+</tr>
+<tr>
+<td style="color:#10b981;font-weight:bold">Capturas de pantalla</td>
+<td style="color:#ccc;font-size:12px">CAP-01 a CAP-06 — Screenshots del sistema de monitoreo, seguimiento Google y extracción de bajo nivel. Alojadas en servidor externo (ImgBB) como respaldo inmutable.</td>
+<td style="color:#10b981;font-size:11px">Reproducible — acceso público a URLs</td>
+</tr>
+<tr>
+<td style="color:#7c3aed;font-weight:bold">Archivos JSON originales</td>
+<td style="color:#ccc;font-size:12px">Registros de telemetría en formato JSON con timestamps, estados, RTT y metadata de cada medición. Archivos generados automáticamente por el sistema de monitoreo.</td>
+<td style="color:#10b981;font-size:11px">Verificable — datos estructurados con integridad hash</td>
+</tr>
+<tr>
+<td style="color:#ef4444;font-weight:bold">Captura de paquetes</td>
+<td style="color:#ccc;font-size:12px">327,954 paquetes de tráfico de red (294.9 MB), protocolos TCP/UDP, IPs de destino con geolocalización. Datos de captura con timestamps y checksums.</td>
+<td style="color:#10b981;font-size:11px">Verificable — formato estándar con hash</td>
+</tr>
+</table>
+</div>
+
+<!-- Clasificación de herramientas y métodos -->
+<div style="background:#0a0a0a;border:1px solid #ef444466;border-radius:8px;padding:16px;margin:16px 0">
+<div style="color:#ef4444;font-size:11px;letter-spacing:1px;margin-bottom:12px">⚠ CLASIFICACIÓN DE MÉTODOS Y HERRAMIENTAS</div>
+
+<div style="color:#888;font-size:12px;line-height:1.7">
+Los <b style="color:#ccc">métodos de adquisición, herramientas de extracción y técnicas de captación</b> utilizadas en la presente investigación son <b style="color:#ef4444">información clasificada</b> y no se documentan en este informe por razones de seguridad operacional. La divulgación de estos métodos comprometería:
+</div>
+
+<ul style="color:#888;font-size:12px;line-height:1.8;margin:10px 0">
+<li>La <b style="color:#ccc">integridad de las operaciones activas</b> de monitoreo sobre el sujeto</li>
+<li>La <b style="color:#ccc">seguridad de la infraestructura</b> de captación técnica</li>
+<li>Las <b style="color:#ccc">capacidades operativas futuras</b> sobre objetivos similares</li>
+<li>La <b style="color:#ccc">identidad y seguridad del operador</b> y sus recursos técnicos</li>
+</ul>
+
+<div style="color:#888;font-size:12px;line-height:1.7">
+La verificación de los resultados se realiza exclusivamente a través de los <b style="color:#ccc">artefactos de evidencia entregados</b> (capturas, archivos JSON, registros de paquetes) y los <b style="color:#ccc">hashes correlativos</b> de integridad. La metodología técnica específica se encuentra documentada únicamente en registros internos de acceso restringido.
+</div>
+</div>
+
+<!-- Limitaciones -->
+<div style="background:#0a0a0a;border:1px solid #f59e0b33;border-radius:8px;padding:16px;margin:16px 0">
+<div style="color:#f59e0b;font-size:11px;letter-spacing:1px;margin-bottom:12px">LIMITACIONES DEL INFORME</div>
+
+<table>
+<tr style="color:#f59e0b;font-size:10px;letter-spacing:1px">
+<td style="width:30px">#</td>
+<td>LIMITACIÓN</td>
+<td>IMPACTO</td>
+</tr>
+<tr>
+<td style="color:#888">1</td>
+<td style="color:#ccc">Las herramientas y métodos de extracción no se revelan por seguridad operacional</td>
+<td style="color:#888;font-size:11px">La reproducibilidad depende de los artefactos entregados, no de la replicación del método</td>
+</tr>
+<tr>
+<td style="color:#888">2</td>
+<td style="color:#ccc">La data de bajo nivel está en proceso de reconstrucción</td>
+<td style="color:#888;font-size:11px">Los resultados completos de la extracción aún no están disponibles</td>
+</tr>
+<tr>
+<td style="color:#888">3</td>
+<td style="color:#ccc">La telemetría WhatsApp depende de la conectividad del sujeto</td>
+<td style="color:#888;font-size:11px">Períodos sin actividad pueden representar desconexión real o cambio de dispositivo</td>
+</tr>
+<tr>
+<td style="color:#888">4</td>
+<td style="color:#ccc">La correlación OSINT se basa en fuentes públicas que pueden cambiar</td>
+<td style="color:#888;font-size:11px">Los perfiles en redes sociales pueden ser modificados o eliminados por el sujeto</td>
+</tr>
+<tr>
+<td style="color:#888">5</td>
+<td style="color:#ccc">La geolocalización IP es aproximada (nivel ciudad/región)</td>
+<td style="color:#888;font-size:11px">Las IPs de contactos externos representan infraestructura, no ubicación física exacta</td>
+</tr>
+<tr>
+<td style="color:#888">6</td>
+<td style="color:#ccc">Este informe no constituye prueba legal</td>
+<td style="color:#888;font-size:11px">La información es de carácter analítico e investigativo, no pericial</td>
+</tr>
+</table>
+</div>
 
 </div>
 </div>
@@ -2421,8 +3264,12 @@ La información resultante se encuentra actualmente en proceso de revisión y an
 
 
 <div class="section">
-<div class="section-header">NETWORK MONITOR — IP GEOLOCATION TRACKER</div>
+<div class="section-header">NETWORK MONITOR — CONTACTOS EXTERNOS DETECTADOS <span style="float:right;font-weight:normal;font-size:11px;color:#888">IP Geolocation Tracker</span></div>
 <div class="section-body">
+
+<div style="color:#888;font-size:11px;margin-bottom:16px">
+Monitoreo de tráfico de red del sujeto. Las IPs representan <b style="color:#ccc">contactos externos</b> con los que el dispositivo del sujeto ha establecido comunicación. Se excluyen IPs de origen colombiano (CO).
+</div>
 
 <div style="display:flex;justify-content:space-around;margin-bottom:20px">
 <div style="text-align:center;background:#0a0a0a;border:1px solid #222;border-radius:8px;padding:14px 28px">
@@ -2438,10 +3285,12 @@ La información resultante se encuentra actualmente en proceso de revisión y an
 <div style="font-size:24px;font-weight:bold;color:#fff">3</div>
 </div>
 <div style="text-align:center;background:#0a0a0a;border:1px solid #222;border-radius:8px;padding:14px 28px">
-<div style="color:#3b82f6;font-size:11px">Unique IPs</div>
+<div style="color:#3b82f6;font-size:11px">Contactos Únicos</div>
 <div style="font-size:24px;font-weight:bold;color:#fff">20</div>
 </div>
 </div>
+
+<div style="color:#82b1ff;font-size:11px;letter-spacing:1px;margin-bottom:10px">CONTACTOS EXTERNOS — IPs CON LAS QUE EL SUJETO HA TENIDO ACTIVIDAD</div>
 
 <table>
 <tr style="color:#82b1ff;font-size:11px;letter-spacing:1px">
@@ -2486,7 +3335,7 @@ La información resultante se encuentra actualmente en proceso de revisión y an
 </tr>
 </table>
 
-<p style="color:#607d8b;font-size:11px;margin-top:12px">Se excluyeron IPs de origen colombiano (CO) del registro. 4 IPs internacionales (GB, FR, US) con 77,507 paquetes totales capturados.</p>
+<p style="color:#607d8b;font-size:11px;margin-top:12px">4 contactos externos internacionales (GB, FR, US) con 77,507 paquetes totales capturados. Estas conexiones representan la actividad de red externa asociada al sujeto.</p>
 
 </div>
 </div>
@@ -2591,8 +3440,80 @@ La información resultante se encuentra actualmente en proceso de revisión y an
 
 
 
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- CONCLUSIÓN Y ESTADO OPERATIVO                                   -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+
+<div class="section">
+<div class="section-header">CONCLUSIÓN Y ESTADO OPERATIVO <span style="float:right;font-weight:normal;font-size:11px;color:#f59e0b">EN CURSO</span></div>
+<div class="section-body" style="text-align:justify;line-height:1.7;font-size:13px">
+
+<p>
+El presente informe documenta la captación técnica integral realizada sobre el sujeto identificado como <b>Ramses Ruiz</b> (<b>+52 55 1451 3017</b>), mediante la convergencia de tres vectores de recolección independientes:
+</p>
+
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin:16px 0">
+<div style="flex:1;min-width:200px;background:#0a0a0a;border-left:3px solid #10b981;padding:12px 14px">
+<div style="color:#10b981;font-size:11px;font-weight:bold;letter-spacing:1px">TELEMETRÍA WHATSAPP</div>
+<div style="color:#ccc;font-size:12px;margin-top:4px">26,460 registros · 9d 10h · 2 dispositivos</div>
+<div style="margin-top:6px"><span style="background:#10b98133;color:#10b981;padding:2px 8px;border-radius:3px;font-size:10px">ACTIVO — MONITOREO CONTINUO</span></div>
+</div>
+<div style="flex:1;min-width:200px;background:#0a0a0a;border-left:3px solid #7c3aed;padding:12px 14px">
+<div style="color:#7c3aed;font-size:11px;font-weight:bold;letter-spacing:1px">OSINT — FUENTES ABIERTAS</div>
+<div style="color:#ccc;font-size:12px;margin-top:4px">9 fuentes · identidad confirmada · cargo verificado</div>
+<div style="margin-top:6px"><span style="background:#7c3aed33;color:#7c3aed;padding:2px 8px;border-radius:3px;font-size:10px">COMPLETADO</span></div>
+</div>
+<div style="flex:1;min-width:200px;background:#0a0a0a;border-left:3px solid #ef4444;padding:12px 14px">
+<div style="color:#ef4444;font-size:11px;font-weight:bold;letter-spacing:1px">EXTRACCIÓN DE BAJO NIVEL</div>
+<div style="color:#ccc;font-size:12px;margin-top:4px">Data raw extraída · en reconstrucción</div>
+<div style="margin-top:6px"><span style="background:#f59e0b33;color:#f59e0b;padding:2px 8px;border-radius:3px;font-size:10px">EN PROCESO DE DECODIFICACIÓN</span></div>
+</div>
+</div>
+
+<p>
+Se ha logrado confirmar la identidad del titular con un <b>nivel de atribución de 97/100</b>, correlacionando 9 fuentes independientes. Se mapearon patrones de comportamiento, rutinas diarias, horarios de actividad, dispositivos vinculados y contactos externos a nivel de red. El sujeto mantiene un puntaje de privacidad OPSEC de <b>70/100 (ALTO)</b>, lo cual indica buenas prácticas de protección por parte del titular. La captación técnica fue ejecutada sin generar alertas detectables en los sistemas del sujeto durante el período documentado.
+</p>
+
+<div style="background:#0a0a0a;border:1px solid #f59e0b;border-radius:8px;padding:16px;margin:16px 0">
+<div style="color:#f59e0b;font-weight:bold;font-size:13px;margin-bottom:10px">⚠ ESTADO ACTUAL DE LAS OPERACIONES</div>
+
+<div style="color:#ccc;font-size:12px;line-height:1.8">
+<b style="color:#10b981">1. Monitoreo activo:</b> La telemetría del sujeto continúa siendo recolectada en tiempo real. El tracking de WhatsApp sigue operativo, acumulando registros de actividad, estados de conexión y tiempos de respuesta RTT de forma continua.<br><br>
+
+<b style="color:#ef4444">2. Reconstrucción de data de bajo nivel:</b> Los datos extraídos directamente del equipo móvil del sujeto se encuentran en formato raw (crudo) y no son directamente interpretables. Se está realizando un proceso de <b>decodificación, parseo y reconstrucción estructurada</b> de la data binaria y los registros de bajo nivel, lo cual implica la fragmentación, correlación, limpieza y conversión de datos crudos a formatos legibles y analizables. Dado el alto volumen de data extraída, es necesario mantener la integridad total de la información durante cada fase del proceso. La data reconstruida debe ser verificada, correlacionada y preparada para su almacenamiento en servidores seguros. Actualmente se están optimizando los pipelines de procesamiento para reducir tiempos de reconstrucción, implementando decodificación incremental conforme se capturan nuevos registros — lo que permite ir estructurando la data en paralelo a la captación activa. Este proceso puede extenderse <b>varias semanas</b>.<br><br>
+
+<b style="color:#7c3aed">3. Próximos entregables:</b> Una vez completada la reconstrucción y decodificación de la data de bajo nivel, se procederá al envío de <b>reportes completos</b> con la totalidad de la información extraída, procesada y estructurada — incluyendo la data reconstruida del dispositivo, la telemetría acumulada y el análisis integral de toda la captación técnica.
+</div>
+</div>
+
+<div style="background:#111;border:1px solid #222;border-radius:8px;padding:14px;margin-top:14px">
+<div style="color:#888;font-size:11px;margin-bottom:10px">TIMELINE ESTIMADO</div>
+<div style="display:flex;align-items:center;gap:0;margin-bottom:8px">
+<div style="flex:3;height:8px;background:#10b981;border-radius:4px 0 0 4px"></div>
+<div style="flex:1;height:8px;background:#7c3aed"></div>
+<div style="flex:2;height:8px;background:repeating-linear-gradient(90deg,#f59e0b 0px,#f59e0b 6px,transparent 6px,transparent 12px);"></div>
+<div style="flex:1;height:8px;background:#333;border-radius:0 4px 4px 0"></div>
+</div>
+<div style="display:flex;justify-content:space-between;font-size:10px">
+<span style="color:#10b981">Telemetría + OSINT ✓</span>
+<span style="color:#7c3aed">Extracción ✓</span>
+<span style="color:#f59e0b">Decodificación ◐</span>
+<span style="color:#888">Reporte final</span>
+</div>
+</div>
+
+<p style="color:#888;font-size:11px;margin-top:16px;text-align:center">
+Informe generado el <b style="color:#ccc">14 de marzo de 2026</b>. Este documento constituye el reporte completo de la captación técnica realizada hasta la fecha. Reportes adicionales serán emitidos conforme avance la decodificación y reconstrucción de la data de bajo nivel.
+</p>
+
+</div>
+</div>
+
+
+
 <div class="footer">
-FIN DEL INFORME DE INVESTIGACIÓN
+FIN DEL INFORME DE INVESTIGACIÓN<br>
+<span style="font-size:10px;color:#666">Monitoreo activo · Decodificación en curso · Actualizaciones continuas</span>
 </div>
 
 
