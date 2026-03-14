@@ -1,0 +1,685 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INFORME OPERATIVO OSINT — +525523904807</title>
+
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background: #0a0a0a; color: #c0c0c0; padding: 20px;
+    line-height: 1.6;
+}
+.container { max-width: 960px; margin: 0 auto; }
+.classification-bar {
+    background: #b71c1c; color: #fff; text-align: center;
+    padding: 8px; font-weight: bold; font-size: 14px;
+    letter-spacing: 2px; border-radius: 4px 4px 0 0;
+}
+.header-block {
+    background: #111; border: 1px solid #333;
+    border-top: none; padding: 24px; text-align: center;
+    border-radius: 0 0 4px 4px; margin-bottom: 20px;
+}
+.header-block h1 {
+    color: #00bcd4; font-size: 22px;
+    letter-spacing: 3px; margin-bottom: 16px;
+}
+.header-block .meta-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: 8px; text-align: left; max-width: 500px; margin: 0 auto;
+}
+.meta-label { color: #607d8b; font-size: 12px; }
+.meta-value { color: #e0e0e0; font-size: 13px; font-weight: bold; }
+.section {
+    background: #111; border: 1px solid #222;
+    border-radius: 4px; margin-bottom: 16px; overflow: hidden;
+}
+.section-header {
+    background: #1a237e; padding: 12px 16px;
+    font-size: 13px; font-weight: bold; color: #82b1ff;
+    letter-spacing: 1px; border-bottom: 1px solid #283593;
+}
+.section-body { padding: 16px; }
+.section-body p { margin-bottom: 12px; }
+table {
+    width: 100%; border-collapse: collapse; font-size: 12px;
+}
+th {
+    background: #1a237e; color: #82b1ff; padding: 8px 10px;
+    text-align: left; font-size: 11px; letter-spacing: 1px;
+}
+td {
+    padding: 6px 10px; border-bottom: 1px solid #1a1a1a;
+    vertical-align: top;
+}
+tr:hover { background: #1a1a2e; }
+.risk-badge {
+    display: inline-block; padding: 4px 16px; border-radius: 3px;
+    font-weight: bold; font-size: 16px; letter-spacing: 2px;
+}
+.risk-bar {
+    height: 8px; border-radius: 4px; margin: 8px 0;
+    background: #222;
+}
+.risk-fill { height: 100%; border-radius: 4px; }
+.timeline-entry { padding: 8px 0; border-bottom: 1px solid #1a1a1a; }
+.timeline-hora {
+    color: #00bcd4; font-weight: bold; font-size: 14px;
+    margin-right: 12px;
+}
+.finding-detail {
+    background: #0d0d0d; border-left: 3px solid #1a237e;
+    padding: 12px; margin: 8px 0; border-radius: 0 4px 4px 0;
+}
+.finding-detail h4 { color: #82b1ff; margin-bottom: 6px; }
+.tag {
+    display: inline-block; padding: 2px 8px; border-radius: 3px;
+    font-size: 10px; font-weight: bold; margin: 1px;
+}
+.tag-confirmed { background: #1b5e20; color: #a5d6a7; }
+.tag-error { background: #b71c1c; color: #ef9a9a; }
+.tag-notfound { background: #e65100; color: #ffcc80; }
+.gap-card {
+    background: #1a0a0a; border-left: 3px solid #f44336;
+    padding: 12px; margin: 8px 0;
+}
+.rec-card {
+    border-left: 3px solid #00bcd4; padding: 12px; margin: 8px 0;
+    background: #0a1a1a;
+}
+.footer-bar {
+    background: #b71c1c; color: #fff; text-align: center;
+    padding: 8px; font-weight: bold; font-size: 12px;
+    letter-spacing: 2px; margin-top: 20px; border-radius: 4px;
+}
+.compliance-list li {
+    padding: 4px 0; color: #bdbdbd; font-size: 12px;
+}
+</style>
+
+</head>
+<body>
+<div class="container">
+
+    <div class="classification-bar">CONFIDENCIAL // USO OFICIAL // OSINT</div>
+    <div class="header-block">
+        <h1>INFORME DE INTELIGENCIA OSINT</h1>
+        <div style="color:#00bcd4;font-size:28px;font-weight:bold;letter-spacing:3px;margin:12px 0;">
+            +52 5523904807
+        </div>
+        <div class="meta-grid">
+            <div><span class="meta-label">CASO ID</span><br><span class="meta-value">OSINTMX-20260306-151907-FE7D39</span></div>
+            <div><span class="meta-label">ANALISTA</span><br><span class="meta-value">OSINT MX v4.0.0 [Automatizado]</span></div>
+            <div><span class="meta-label">FECHA</span><br><span class="meta-value">2026-03-06</span></div>
+            <div><span class="meta-label">HORA</span><br><span class="meta-value">1519 HRS</span></div>
+        </div>
+    </div>
+
+    <!-- 01. RESUMEN EJECUTIVO -->
+    <div class="section">
+        <div class="section-header">01. RESUMEN EJECUTIVO</div>
+        <div class="section-body"><p>Análisis OSINT del número <b>+525523904807</b> completado a las 1519 hrs. Se identificaron <b>13 resultado(s)</b>, de los cuales <b>11 están confirmados</b>. Ubicación por LADA: <b>Ciudad de México (CDMX)</b>. Presencia confirmada en: <b>WhatsApp</b>. Nivel de riesgo/exposición: <b>BAJO (10/100)</b>. Se identificaron <b>5 brecha(s)</b> de información. Identidad asociada: <b>Dolores Patricia Cruz Rojas</b> — Directora General Adjunta de Análisis de Operaciones de la Unidad de Inteligencia Financiera (UIF).</p></div>
+    </div>
+
+    <!-- 02. OBJETIVO Y ALCANCE -->
+    <div class="section">
+        <div class="section-header">02. OBJETIVO Y ALCANCE</div>
+        <div class="section-body">
+            <table>
+                <tr><td class="meta-label" style="width:160px;">Objetivo</td><td style="color:#00bcd4;font-weight:bold;font-size:15px;">+52 5523904807</td></tr>
+                <tr><td class="meta-label">E.164</td><td>+525523904807</td></tr>
+                <tr><td class="meta-label">LADA</td><td>55</td></tr>
+                <tr><td class="meta-label">Ubicación</td><td>Ciudad de México (CDMX)</td></tr>
+                <tr><td class="meta-label">Tipo línea</td><td>MOBILE (confirmado HLR)</td></tr>
+                <tr><td class="meta-label">Operador</td><td>PEGASO PCS — Movistar México</td></tr>
+                <tr><td class="meta-label">MCC/MNC</td><td>334030</td></tr>
+                <tr><td class="meta-label">Zona</td><td>Zona metropolitana — Cuauhtémoc, CDMX</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- PERFIL DEL TITULAR -->
+    <div class="section">
+        <div class="section-header">PERFIL DEL TITULAR IDENTIFICADO</div>
+        <div class="section-body">
+            <div style="display:flex;gap:20px;align-items:flex-start;">
+                <img src="https://pbs.twimg.com/media/GWPx-qXXUCcwBAf?format=jpg&name=large" style="width:150px;border-radius:6px;border:1px solid #333;">
+                <table style="flex:1;">
+                <tr><td class="meta-label" style="width:180px;">Nombre completo</td><td style="color:#e0e0e0;font-weight:bold;">Dolores Patricia Cruz Rojas</td></tr>
+                <tr><td class="meta-label">Alias / Variantes</td><td>Patricia Cruz Rojas, Paty Cruz, Patricia Uif, Paty Rojas Cruz</td></tr>
+                <tr><td class="meta-label">Cargo</td><td>Directora General Adjunta de Análisis de Operaciones</td></tr>
+                <tr><td class="meta-label">Organización</td><td>Unidad de Inteligencia Financiera (UIF)</td></tr>
+                <tr><td class="meta-label">Ubicación</td><td>Cuauhtémoc, Ciudad de México, México</td></tr>
+                <tr><td class="meta-label">Clasificación</td><td>Funcionaria pública de alto nivel</td></tr>
+            </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- PERFILES PÚBLICOS -->
+    <div class="section">
+        <div class="section-header">PERFILES PÚBLICOS IDENTIFICADOS</div>
+        <div class="section-body">
+            <table>
+                <tr><td class="meta-label" style="width:180px;">WhatsApp</td><td><a href="https://wa.me/525523904807" target="_blank" style="color:#82b1ff">https://wa.me/525523904807</a></td></tr>
+                <tr><td class="meta-label">Truecaller</td><td><a href="https://www.truecaller.com/search/mx/5523904807" target="_blank" style="color:#82b1ff">https://www.truecaller.com/search/mx/5523904807</a> — "Patricia Uif"</td></tr>
+                <tr><td class="meta-label">LinkedIn</td><td><a href="https://www.linkedin.com/in/patricia-cruz-rojas-5bb602114/" target="_blank" style="color:#82b1ff">https://www.linkedin.com/in/patricia-cruz-rojas-5bb602114/</a></td></tr>
+                <tr><td class="meta-label">Facebook</td><td><a href="https://www.facebook.com/paty.rojas.cruz.2025" target="_blank" style="color:#82b1ff">https://www.facebook.com/paty.rojas.cruz.2025</a> — "Paty Rojas Cruz"</td></tr>
+                <tr><td class="meta-label">CallApp</td><td><a href="https://callapp.com/search-result/525523904807" target="_blank" style="color:#82b1ff">https://callapp.com/search-result/525523904807</a> — "Paty Cruz"</td></tr>
+                <tr><td class="meta-label">HLR Lookup</td><td><a href="https://www.hlrlookup.com/" target="_blank" style="color:#82b1ff">https://www.hlrlookup.com/</a></td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- 03. METODOLOGÍA -->
+    <div class="section">
+        <div class="section-header">03. METODOLOGÍA</div>
+        <div class="section-body">
+            <p>[1] Validación y normalización del número (nutils/normalizer)</p>
+            <p>[2] Generación de formatos, hashes y dorks (services/hash, services/dork)</p>
+            <p>[3] Consulta a APIs externas (HLR, NumVerify, IPQS)</p>
+            <p>[4] Verificación activa en plataformas (WhatsApp, Telegram, Truecaller)</p>
+            <p>[5] Análisis de bibliotecas locales (phonenumbers, LADA)</p>
+            <p>[6] Evaluación de riesgo basada en evidencia (core/analyzer)</p>
+            <p>[7] Identificación de brechas y recomendaciones</p>
+            <p>[8] Compilación del informe operativo (v4.0.0)</p>
+        </div>
+    </div>
+
+    <!-- 04. CRONOLOGÍA -->
+    <div class="section">
+        <div class="section-header">04. CRONOLOGÍA</div>
+        <div class="section-body">
+        <div class="timeline-entry">
+            <span class="timeline-hora">1519</span>
+            <span style="color:#e0e0e0;">Inicio de análisis OSINT</span>
+            <br><span style="color:#607d8b;font-size:11px;margin-left:48px;">
+                Objetivo: +525523904807</span>
+        </div>
+        <div class="timeline-entry">
+            <span class="timeline-hora">1519</span>
+            <span style="color:#e0e0e0;">Recolección de datos automatizada</span>
+            <br><span style="color:#607d8b;font-size:11px;margin-left:48px;">
+                13 resultados de 7 servicios</span>
+        </div>
+        <div class="timeline-entry">
+            <span class="timeline-hora">1519</span>
+            <span style="color:#e0e0e0;">Evaluación de riesgo completada</span>
+            <br><span style="color:#607d8b;font-size:11px;margin-left:48px;">
+                Nivel: BAJO (10/100)</span>
+        </div>
+        <div class="timeline-entry">
+            <span class="timeline-hora">1519</span>
+            <span style="color:#e0e0e0;">Generación de informe operativo</span>
+            <br><span style="color:#607d8b;font-size:11px;margin-left:48px;">
+                Caso OSINTMX-20260306-151907-FE7D39</span>
+        </div></div>
+    </div>
+
+    <!-- 05. HALLAZGOS -->
+    <div class="section">
+        <div class="section-header">05. HALLAZGOS (13)</div>
+        <div class="section-body">
+            <table>
+                <thead>
+                    <tr><th>ID</th><th>TÍTULO</th><th>CONF.</th><th>SEV.</th><th>ESTADO</th><th>EVID.</th></tr>
+                </thead>
+                <tbody>
+        <tr>
+            <td style="color:#00bcd4;font-weight:bold;">H-001</td>
+            <td>Identificación de zona geográfica por LADA</td>
+            <td style="color:#4caf50;font-weight:bold;text-align:center;">95%</td>
+            <td style="text-align:center;">3/10</td>
+            <td><span class="tag tag-confirmed">CONFIRMADO</span></td>
+            <td style="color:#607d8b;">EV-001</td>
+        </tr>
+        <tr>
+            <td style="color:#00bcd4;font-weight:bold;">H-002</td>
+            <td>Datos del operador y tipo de línea</td>
+            <td style="color:#ff9800;font-weight:bold;text-align:center;">50%</td>
+            <td style="text-align:center;">4/10</td>
+            <td><span class="tag tag-confirmed">CONFIRMADO</span></td>
+            <td style="color:#607d8b;">EV-002</td>
+        </tr>
+        <tr>
+            <td style="color:#00bcd4;font-weight:bold;">H-003</td>
+            <td>Hashes criptográficos del número generados</td>
+            <td style="color:#4caf50;font-weight:bold;text-align:center;">99%</td>
+            <td style="text-align:center;">2/10</td>
+            <td><span class="tag tag-confirmed">CONFIRMADO</span></td>
+            <td style="color:#607d8b;">EV-003</td>
+        </tr>
+        <tr>
+            <td style="color:#00bcd4;font-weight:bold;">H-004</td>
+            <td>Vectores de búsqueda OSINT generados</td>
+            <td style="color:#4caf50;font-weight:bold;text-align:center;">99%</td>
+            <td style="text-align:center;">4/10</td>
+            <td><span class="tag tag-confirmed">CONFIRMADO</span></td>
+            <td style="color:#607d8b;">EV-004</td>
+        </tr>
+        <tr>
+            <td style="color:#00bcd4;font-weight:bold;">H-005</td>
+            <td>Presencia en WhatsApp</td>
+            <td style="color:#4caf50;font-weight:bold;text-align:center;">90%</td>
+            <td style="text-align:center;">7/10</td>
+            <td><span class="tag tag-confirmed">CONFIRMADO</span></td>
+            <td style="color:#607d8b;">EV-005</td>
+        </tr>
+        <tr>
+            <td style="color:#00bcd4;font-weight:bold;">H-006</td>
+            <td>Consulta HLR (señalización SS7)</td>
+            <td style="color:#f44336;font-weight:bold;text-align:center;">0%</td>
+            <td style="text-align:center;">1/10</td>
+            <td><span class="tag tag-error">ERROR</span></td>
+            <td style="color:#607d8b;">EV-006</td>
+        </tr>
+        <tr>
+            <td style="color:#00bcd4;font-weight:bold;">H-007</td>
+            <td>Menciones en búsqueda web (Google CSE)</td>
+            <td style="color:#ff9800;font-weight:bold;text-align:center;">60%</td>
+            <td style="text-align:center;">3/10</td>
+            <td><span class="tag tag-notfound">NO_ENCONTRADO</span></td>
+            <td style="color:#607d8b;">EV-007</td>
+        </tr>
+        <tr>
+            <td style="color:#00bcd4;font-weight:bold;">H-008</td>
+            <td>Truecaller — Identidad: Patricia Uif</td>
+            <td style="color:#4caf50;font-weight:bold;text-align:center;">95%</td>
+            <td style="text-align:center;">3/10</td>
+            <td><span class="tag tag-confirmed">CONFIRMADO</span></td>
+            <td style="color:#607d8b;">EV-008</td>
+        </tr>
+        <tr>
+            <td style="color:#00bcd4;font-weight:bold;">H-009</td>
+            <td>Identidad completa — Dolores Patricia Cruz Rojas</td>
+            <td style="color:#4caf50;font-weight:bold;text-align:center;">90%</td>
+            <td style="text-align:center;">3/10</td>
+            <td><span class="tag tag-confirmed">CONFIRMADO</span></td>
+            <td style="color:#607d8b;">EV-009</td>
+        </tr>
+        <tr>
+            <td style="color:#00bcd4;font-weight:bold;">H-010</td>
+            <td>Perfil LinkedIn — Patricia Cruz Rojas</td>
+            <td style="color:#4caf50;font-weight:bold;text-align:center;">85%</td>
+            <td style="text-align:center;">3/10</td>
+            <td><span class="tag tag-confirmed">CONFIRMADO</span></td>
+            <td style="color:#607d8b;">EV-010</td>
+        </tr>
+        <tr>
+            <td style="color:#00bcd4;font-weight:bold;">H-011</td>
+            <td>Perfil Facebook — Paty Rojas Cruz</td>
+            <td style="color:#4caf50;font-weight:bold;text-align:center;">80%</td>
+            <td style="text-align:center;">3/10</td>
+            <td><span class="tag tag-confirmed">CONFIRMADO</span></td>
+            <td style="color:#607d8b;">EV-011</td>
+        </tr>
+        <tr>
+            <td style="color:#00bcd4;font-weight:bold;">H-012</td>
+            <td>HLR Lookup manual — Red Movistar MOBILE confirmado</td>
+            <td style="color:#4caf50;font-weight:bold;text-align:center;">98%</td>
+            <td style="text-align:center;">3/10</td>
+            <td><span class="tag tag-confirmed">CONFIRMADO</span></td>
+            <td style="color:#607d8b;">EV-012</td>
+        </tr>
+        <tr>
+            <td style="color:#00bcd4;font-weight:bold;">H-013</td>
+            <td>CallApp — Resultado de búsqueda</td>
+            <td style="color:#4caf50;font-weight:bold;text-align:center;">75%</td>
+            <td style="text-align:center;">3/10</td>
+            <td><span class="tag tag-confirmed">CONFIRMADO</span></td>
+            <td style="color:#607d8b;">EV-013</td>
+        </tr></tbody>
+            </table>
+
+            <div style="margin-top:16px;">
+        <div class="finding-detail">
+            <h4>[H-001] Identificación de zona geográfica por LADA</h4>
+            <p>El número pertenece a la zona de Ciudad de México (CDMX) (LADA 55). Zona metropolitana.</p>
+            <span style="color:#607d8b;font-size:11px;">
+                Fuente: lada &bull;
+                Confianza: 95% &bull;
+                Severidad: 3/10 &bull;
+                Evidencia: EV-001
+            </span>
+        </div>
+        <div class="finding-detail">
+            <h4>[H-002] Datos del operador y tipo de línea</h4>
+            <p>Tipo de línea: Fija o Móvil. Operador: NO DISPONIBLE. Ubicación: Ciudad de México, CDMX.</p>
+            <span style="color:#607d8b;font-size:11px;">
+                Fuente: phonenumbers &bull;
+                Confianza: 50% &bull;
+                Severidad: 4/10 &bull;
+                Evidencia: EV-002
+            </span>
+        </div>
+        <div class="finding-detail">
+            <h4>[H-003] Hashes criptográficos del número generados</h4>
+            <p>Se generaron hashes criptográficos del número en formato E.164. MD5: 1593307fccdc14b4... Útiles para búsqueda en datasets de leaks y correlación.</p>
+            <span style="color:#607d8b;font-size:11px;">
+                Fuente: hash &bull;
+                Confianza: 99% &bull;
+                Severidad: 2/10 &bull;
+                Evidencia: EV-003
+            </span>
+        </div>
+        <div class="finding-detail">
+            <h4>[H-004] Vectores de búsqueda OSINT generados</h4>
+            <p>Se generaron 11 Google dorks y URLs de búsqueda directa. Requieren exploración manual en navegador.</p>
+            <span style="color:#607d8b;font-size:11px;">
+                Fuente: dorks &bull;
+                Confianza: 99% &bull;
+                Severidad: 4/10 &bull;
+                Evidencia: EV-004
+            </span>
+        </div>
+        <div class="finding-detail">
+            <h4>[H-005] Presencia en WhatsApp</h4>
+            <p>Presencia CONFIRMADA en WhatsApp. Perfil: <a href="https://wa.me/525523904807" target="_blank" style="color:#82b1ff">https://wa.me/525523904807</a>. Redirect verificado hacia API de WhatsApp.</p>
+            <span style="color:#607d8b;font-size:11px;">
+                Fuente: whatsapp &bull;
+                Confianza: 90% &bull;
+                Severidad: 7/10 &bull;
+                Evidencia: EV-005
+            </span>
+        </div>
+        <div class="finding-detail">
+            <h4>[H-006] Consulta HLR (señalización SS7)</h4>
+            <p style="color:#f44336;">Error durante la consulta: Not enough credits.</p>
+            <span style="color:#607d8b;font-size:11px;">
+                Fuente: hlr &bull;
+                Confianza: 0% &bull;
+                Severidad: 1/10 &bull;
+                Evidencia: EV-006
+            </span>
+        </div>
+        <div class="finding-detail">
+            <h4>[H-007] Menciones en búsqueda web (Google CSE)</h4>
+            <p>Se encontraron 0 menciones en búsqueda web.</p>
+            <span style="color:#607d8b;font-size:11px;">
+                Fuente: google_cse &bull;
+                Confianza: 60% &bull;
+                Severidad: 3/10 &bull;
+                Evidencia: EV-007
+            </span>
+        </div>
+        <div class="finding-detail">
+            <h4>[H-008] Truecaller — Identidad: Patricia Uif</h4>
+            <p>Truecaller identifica el número como <b>'Patricia Uif'</b>. Telefonía: Movistar / Pegaso PCS S.A. de C.V. Ubicación: Cuauhtémoc, Ciudad de México, México. Hora local: 10:50. Evidencia: <a href="https://www.truecaller.com/search/mx/5523904807" target="_blank" style="color:#82b1ff">truecaller.com/search/mx/5523904807</a></p>
+            <span style="color:#607d8b;font-size:11px;">
+                Fuente: manual:truecaller &bull;
+                Confianza: 95% &bull;
+                Severidad: 3/10 &bull;
+                Evidencia: EV-008
+            </span>
+        </div>
+        <div class="finding-detail">
+            <h4>[H-009] Identidad completa — Dolores Patricia Cruz Rojas</h4>
+            <p>Nombre completo: <b>Dolores Patricia Cruz Rojas</b>. Alias: Patricia Cruz Rojas, Paty Cruz. Cargo: <b>Directora General Adjunta de Análisis de Operaciones de la Unidad de Inteligencia Financiera (UIF)</b>. Funcionaria pública de alto nivel.</p>
+            <span style="color:#607d8b;font-size:11px;">
+                Fuente: manual:humint &bull;
+                Confianza: 90% &bull;
+                Severidad: 3/10 &bull;
+                Evidencia: EV-009
+            </span>
+        </div>
+        <div class="finding-detail">
+            <h4>[H-010] Perfil LinkedIn — Patricia Cruz Rojas</h4>
+            <p>Perfil de LinkedIn encontrado y verificado. Coincide con nombre y cargo en la UIF. Perfil profesional activo. Evidencia: <a href="https://www.linkedin.com/in/patricia-cruz-rojas-5bb602114/" target="_blank" style="color:#82b1ff">linkedin.com/in/patricia-cruz-rojas-5bb602114/</a></p>
+            <span style="color:#607d8b;font-size:11px;">
+                Fuente: manual:linkedin &bull;
+                Confianza: 85% &bull;
+                Severidad: 3/10 &bull;
+                Evidencia: EV-010
+            </span>
+        </div>
+        <div class="finding-detail">
+            <h4>[H-011] Perfil Facebook — Paty Rojas Cruz</h4>
+            <p>Perfil de Facebook encontrado: paty.rojas.cruz.2025. Nombre en plataforma: Paty Rojas Cruz. Perfil creado o renombrado en 2025. Evidencia: <a href="https://www.facebook.com/paty.rojas.cruz.2025" target="_blank" style="color:#82b1ff">facebook.com/paty.rojas.cruz.2025</a></p>
+            <span style="color:#607d8b;font-size:11px;">
+                Fuente: manual:facebook &bull;
+                Confianza: 80% &bull;
+                Severidad: 3/10 &bull;
+                Evidencia: EV-011
+            </span>
+        </div>
+        <div class="finding-detail">
+            <h4>[H-012] HLR Lookup manual — Red Movistar MOBILE confirmado</h4>
+            <p>Consulta HLR manual en hlrlookup.com. Red: PEGASO PCS (Movistar México). MCC/MNC: 334030. Tipo: MOBILE. Estado: AVAILABLE. Área: Mexico City, FD. Timestamp: 2026-03-06T17:00:00Z.</p>
+            <span style="color:#607d8b;font-size:11px;">
+                Fuente: manual:hlr &bull;
+                Confianza: 98% &bull;
+                Severidad: 3/10 &bull;
+                Evidencia: EV-012
+            </span>
+        </div>
+        <div class="finding-detail">
+            <h4>[H-013] CallApp — Resultado de búsqueda</h4>
+            <p>CallApp muestra resultado para +525523904807. Nombre asociado: <b>Paty Cruz</b>. Ubicación: Mexico City - FD. Evidencia: <a href="https://callapp.com/search-result/525523904807" target="_blank" style="color:#82b1ff">callapp.com/search-result/525523904807</a></p>
+            <span style="color:#607d8b;font-size:11px;">
+                Fuente: manual:scraping &bull;
+                Confianza: 75% &bull;
+                Severidad: 3/10 &bull;
+                Evidencia: EV-013
+            </span>
+        </div></div>
+        </div>
+    </div>
+
+    <!-- 06. EVALUACIÓN DE RIESGO -->
+    <div class="section">
+        <div class="section-header">06. EVALUACIÓN DE RIESGO / AMENAZA</div>
+        <div class="section-body" style="text-align:center;">
+            <div class="risk-badge" style="background:#4caf50;color:#fff;">BAJO</div>
+            <div style="font-size:28px;font-weight:bold;color:#4caf50;margin:12px 0;">10/100</div>
+            <div class="risk-bar">
+                <div class="risk-fill" style="width:10%;background:#4caf50;"></div>
+            </div>
+            <p style="text-align:left;margin-top:12px;">Score de riesgo 10/100 basado en 13 resultado(s).</p>
+            <p style="text-align:left;color:#bdbdbd;">• 10 resultado(s) con confianza ≥70%</p>
+            <p style="text-align:left;color:#bdbdbd;">• Severidad máxima detectada: 7/10</p>
+            <p style="text-align:left;color:#bdbdbd;">• 1 presencia(s) confirmada(s) en redes/mensajería</p>
+            <p style="text-align:left;color:#bdbdbd;">• 5/7 servicios confirmaron datos. Desglose: HLR=0, Broker=0, Breach=0, OSINT=10.</p>
+        </div>
+    </div>
+
+    <!-- 07. HIPÓTESIS -->
+    <div class="section">
+        <div class="section-header">07. HIPÓTESIS ANALÍTICAS</div>
+        <div class="section-body">
+        <div style="padding:10px 0;border-bottom:1px solid #1a1a1a;">
+            <span style="color:#ce93d8;font-weight:bold;">[HIP-001]</span>
+            <span style="color:#ff9800;font-weight:bold;"> Confianza: 55%</span>
+            <p style="margin:6px 0;color:#e0e0e0;">La línea +525523904807 se encuentra ACTIVA y es utilizada en 1 plataforma(s): WhatsApp.</p>
+            <span style="color:#607d8b;font-size:11px;">Soportada por: H-005</span>
+        </div>
+        <div style="padding:10px 0;border-bottom:1px solid #1a1a1a;">
+            <span style="color:#ce93d8;font-weight:bold;">[HIP-002]</span>
+            <span style="color:#ff9800;font-weight:bold;"> Confianza: 60%</span>
+            <p style="margin:6px 0;color:#e0e0e0;">Tipo de línea: Fija o Móvil. Operador: DESCONOCIDO. Zona: Ciudad de México (CDMX).</p>
+            <span style="color:#607d8b;font-size:11px;">Soportada por: H-001, H-002</span>
+        </div></div>
+    </div>
+
+    <!-- 08. BRECHAS -->
+    <div class="section">
+        <div class="section-header">08. BRECHAS / NECESIDADES DE DATOS</div>
+        <div class="section-body">
+        <div class="gap-card">
+            <strong style="color:#f44336;">[GAP-001]</strong>
+            <span style="color:#f44336;font-weight:bold;"> Impacto: ALTO</span>
+            <p style="margin:6px 0;">Sin datos HLR (SS7). Sin información de red, IMSI, roaming o portabilidad.</p>
+            <span style="color:#607d8b;font-size:11px;">Acción: Verificar créditos HLR o ejecutar con --service hlr.</span>
+        </div>
+        <div class="gap-card">
+            <strong style="color:#f44336;">[GAP-002]</strong>
+            <span style="color:#ff9800;font-weight:bold;"> Impacto: MEDIO</span>
+            <p style="margin:6px 0;">APIs no configuradas: numverify, ipqs.</p>
+            <span style="color:#607d8b;font-size:11px;">Acción: Obtener API keys y configurar en .env.</span>
+        </div>
+        <div class="gap-card">
+            <strong style="color:#f44336;">[GAP-003]</strong>
+            <span style="color:#ff9800;font-weight:bold;"> Impacto: MEDIO</span>
+            <p style="margin:6px 0;">Providers no habilitados: truecaller, telegram.</p>
+            <span style="color:#607d8b;font-size:11px;">Acción: Configurar credenciales en .env para ampliar cobertura.</span>
+        </div>
+        <div class="gap-card">
+            <strong style="color:#f44336;">[GAP-004]</strong>
+            <span style="color:#ff9800;font-weight:bold;"> Impacto: MEDIO</span>
+            <p style="margin:6px 0;">11 Google dorks generados pero no ejecutados automáticamente.</p>
+            <span style="color:#607d8b;font-size:11px;">Acción: Explorar dorks manualmente en navegador.</span>
+        </div>
+        <div class="gap-card">
+            <strong style="color:#f44336;">[GAP-005]</strong>
+            <span style="color:#4caf50;font-weight:bold;"> Impacto: BAJO</span>
+            <p style="margin:6px 0;">Registros gubernamentales (RENAPO, INE, SAT) requieren verificación manual.</p>
+            <span style="color:#607d8b;font-size:11px;">Acción: Consultar portales gubernamentales si es legalmente procedente.</span>
+        </div></div>
+    </div>
+
+    <!-- 09. RECOMENDACIONES -->
+    <div class="section">
+        <div class="section-header">09. RECOMENDACIONES OPERATIVAS</div>
+        <div class="section-body">
+        <div class="rec-card">
+            <span style="color:#00bcd4;font-weight:bold;">[REC-001]</span>
+            <span style="color:#f44336;font-weight:bold;"> [ALTA]</span>
+            <p style="margin:6px 0;">[GAP-001] Verificar créditos HLR o ejecutar con --service hlr.</p>
+        </div>
+        <div class="rec-card">
+            <span style="color:#00bcd4;font-weight:bold;">[REC-002]</span>
+            <span style="color:#ff9800;font-weight:bold;"> [MEDIA]</span>
+            <p style="margin:6px 0;">[GAP-002] Obtener API keys y configurar en .env.</p>
+        </div>
+        <div class="rec-card">
+            <span style="color:#00bcd4;font-weight:bold;">[REC-003]</span>
+            <span style="color:#ff9800;font-weight:bold;"> [MEDIA]</span>
+            <p style="margin:6px 0;">[GAP-003] Configurar credenciales en .env para ampliar cobertura.</p>
+        </div>
+        <div class="rec-card">
+            <span style="color:#00bcd4;font-weight:bold;">[REC-004]</span>
+            <span style="color:#ff9800;font-weight:bold;"> [MEDIA]</span>
+            <p style="margin:6px 0;">Monitoreo pasivo en plataformas confirmadas: WhatsApp. No interactuar directamente con el objetivo.</p>
+        </div>
+        <div class="rec-card">
+            <span style="color:#00bcd4;font-weight:bold;">[REC-005]</span>
+            <span style="color:#ce93d8;font-weight:bold;"> [OBLIGATORIA]</span>
+            <p style="margin:6px 0;">Asegurar cumplimiento legal. Toda investigación debe estar autorizada y documentada. Respetar LFPDPPP (México). Prohibido uso para doxxing, acoso o intimidación.</p>
+        </div></div>
+    </div>
+
+    <!-- 10. REGISTRO DE EVIDENCIA -->
+    <div class="section">
+        <div class="section-header">10. REGISTRO DE EVIDENCIA</div>
+        <div class="section-body">
+            <table>
+                <thead><tr><th>ID</th><th>TIPO</th><th>DESCRIPCIÓN</th><th>INTEGRIDAD</th></tr></thead>
+                <tbody>
+        <tr>
+            <td style="color:#00bcd4;">EV-001</td>
+            <td>Base de datos interna LADA</td>
+            <td style="color:#607d8b;">LADA 55 → Ciudad de México (CDMX). Zona metropolitana.</td>
+            <td style="color:#607d8b;">Check automatizado v4.0.0</td>
+        </tr>
+        <tr>
+            <td style="color:#00bcd4;">EV-002</td>
+            <td>Biblioteca phonenumbers (Google libphonenumber)</td>
+            <td style="color:#607d8b;">Tipo de línea: Fija o Móvil. Operador: NO DISPONIBLE. Ubicación: Ciudad de México, CDMX.</td>
+            <td style="color:#607d8b;">Check automatizado v4.0.0</td>
+        </tr>
+        <tr>
+            <td style="color:#00bcd4;">EV-003</td>
+            <td>Generación criptográfica local</td>
+            <td style="color:#607d8b;">Hashes criptográficos E.164. MD5: 1593307fccdc14b4... Útiles para búsqueda en datasets de leaks.</td>
+            <td style="color:#607d8b;">Check automatizado v4.0.0</td>
+        </tr>
+        <tr>
+            <td style="color:#00bcd4;">EV-004</td>
+            <td>Generación automática de dorks</td>
+            <td style="color:#607d8b;">11 Google dorks y URLs de búsqueda directa. Requieren exploración manual.</td>
+            <td style="color:#607d8b;">Check automatizado v4.0.0</td>
+        </tr>
+        <tr>
+            <td style="color:#00bcd4;">EV-005</td>
+            <td>Verificación HTTP — WhatsApp (wa.me redirect)</td>
+            <td style="color:#607d8b;">Presencia CONFIRMADA en WhatsApp. Perfil: wa.me/525523904807. Redirect verificado.</td>
+            <td style="color:#607d8b;">Check automatizado v4.0.0</td>
+        </tr>
+        <tr>
+            <td style="color:#00bcd4;">EV-006</td>
+            <td>Consulta API — HLR Lookups (SS7)</td>
+            <td style="color:#607d8b;">Error: Not enough credits.</td>
+            <td style="color:#607d8b;">Check automatizado v4.0.0</td>
+        </tr>
+        <tr>
+            <td style="color:#00bcd4;">EV-007</td>
+            <td>Consulta API — Google Custom Search</td>
+            <td style="color:#607d8b;">0 menciones en búsqueda web.</td>
+            <td style="color:#607d8b;">Check automatizado v4.0.0</td>
+        </tr>
+        <tr>
+            <td style="color:#00bcd4;">EV-008</td>
+            <td>Investigación manual — Truecaller</td>
+            <td style="color:#607d8b;">Identidad: 'Patricia Uif'. Telefonía: Movistar / Pegaso PCS. Ubicación: Cuauhtémoc, CDMX.</td>
+            <td style="color:#607d8b;">Check automatizado v4.0.0</td>
+        </tr>
+        <tr>
+            <td style="color:#00bcd4;">EV-009</td>
+            <td>Investigación manual — HUMINT</td>
+            <td style="color:#607d8b;">Nombre completo: Dolores Patricia Cruz Rojas. Cargo: DGA de Análisis de Operaciones, UIF.</td>
+            <td style="color:#607d8b;">Check automatizado v4.0.0</td>
+        </tr>
+        <tr>
+            <td style="color:#00bcd4;">EV-010</td>
+            <td>Investigación manual — LinkedIn</td>
+            <td style="color:#607d8b;">Perfil verificado. Coincide con nombre y cargo en la UIF. Perfil profesional activo.</td>
+            <td style="color:#607d8b;">Check automatizado v4.0.0</td>
+        </tr>
+        <tr>
+            <td style="color:#00bcd4;">EV-011</td>
+            <td>Investigación manual — Facebook</td>
+            <td style="color:#607d8b;">Perfil: paty.rojas.cruz.2025. Nombre: Paty Rojas Cruz. Creado/renombrado 2025.</td>
+            <td style="color:#607d8b;">Check automatizado v4.0.0</td>
+        </tr>
+        <tr>
+            <td style="color:#00bcd4;">EV-012</td>
+            <td>Investigación manual — HLR</td>
+            <td style="color:#607d8b;">Red: PEGASO PCS (Movistar México). MCC/MNC: 334030. Tipo: MOBILE. Estado: AVAILABLE. Área: Mexico City, FD.</td>
+            <td style="color:#607d8b;">Check automatizado v4.0.0</td>
+        </tr>
+        <tr>
+            <td style="color:#00bcd4;">EV-013</td>
+            <td>Investigación manual — Scraping (CallApp)</td>
+            <td style="color:#607d8b;">Nombre asociado: Paty Cruz. Ubicación: Mexico City - FD.</td>
+            <td style="color:#607d8b;">Check automatizado v4.0.0</td>
+        </tr></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 11. CUMPLIMIENTO -->
+    <div class="section">
+        <div class="section-header">11. NOTAS DE CUMPLIMIENTO / MINIMIZACIÓN</div>
+        <div class="section-body">
+            <ol class="compliance-list">
+                <li>Informe generado automáticamente por OSINT MX v4.0.0. No constituye prueba legal por sí mismo.</li>
+                <li>Toda investigación debe estar debidamente autorizada y documentada.</li>
+                <li>Datos sujetos a la LFPDPPP (México).</li>
+                <li>Solo fuentes abiertas (OSINT). Sin interacción directa con el objetivo.</li>
+                <li>Prohibido uso para doxxing, acoso o intimidación.</li>
+                <li>Hallazgos "NO_VERIFICABLE" requieren validación adicional.</li>
+                <li>El operador es responsable del uso de esta información.</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="footer-bar">
+        FIN DEL INFORME &mdash; OSINTMX-20260306-151907-FE7D39 &mdash; CONFIDENCIAL // USO OFICIAL // OSINT
+    </div>
+
+</div>
+</body>
+</html>
