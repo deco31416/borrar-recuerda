@@ -1187,19 +1187,114 @@ Cada atributo presentado en los dispositivos fue derivado de una fuente técnica
 <!-- ═══════════════════════════════════════════════════════════════ -->
 
 <div class="section">
-<div class="section-header">ANÁLISIS DE COMUNICACIONES <span style="float:right;font-weight:normal;font-size:11px;color:#f59e0b">datos v2 + SS7 · en reconstrucción</span></div>
+<div class="section-header">ANÁLISIS DE COMUNICACIONES <span style="float:right;font-weight:normal;font-size:11px;color:#82b1ff">reporte-v4.json · telemetría de presencia</span></div>
 <div class="section-body">
 
-<div style="background:#0a0a0a;border:1px solid #f59e0b33;border-radius:8px;padding:20px;text-align:center">
-<div style="color:#f59e0b;font-size:13px;font-weight:bold;margin-bottom:12px">⚠ SECCIÓN EN PROCESO DE RECONSTRUCCIÓN</div>
-<div style="color:#888;font-size:12px;line-height:1.7;max-width:700px;margin:0 auto">
-Los datos de <b style="color:#ccc">contactos, llamadas y mensajes</b> del titular fueron obtenidos mediante la <b style="color:#ccc">extracción de metadatos del dispositivo</b> (informe v2) y la <b style="color:#ef4444">interceptación y captura de paquetes de datos de la línea telefónica vía SS7</b>. Los registros extraídos se encuentran en <b style="color:#ccc">formato sin procesar</b> y requieren decodificación, correlación cruzada y estructuración manual. Los resultados consolidados — incluyendo la tabla completa de contactos, el registro de llamadas, el análisis de mensajes y los datos interceptados vía SS7 — se presentarán en el <b style="color:#ccc">informe final</b>.
+<div style="background:#0a0a0a;border:1px solid #1a237e;border-radius:6px;padding:8px 12px;font-size:10px;color:#888;margin-bottom:16px">
+<span style="color:#82b1ff">▶</span> Análisis de patrones de comunicación del titular <b style="color:#ccc">+52 55 1451 3017</b> basado en <b style="color:#ccc">34,440 mediciones de presencia</b> recopiladas durante 19 días, 20 horas (4 – 24 mar 2026). Se identifican <b style="color:#ccc">2 dispositivos vinculados</b> al JID y se correlaciona con datos de <b style="color:#ef4444">interceptación SS7</b>.
 </div>
-<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:16px">
-<span style="background:#222;color:#f59e0b;padding:4px 12px;border-radius:4px;font-size:10px;letter-spacing:1px">EXTRACCIÓN v2: EN PROCESO</span>
-<span style="background:#7f1d1d;color:#ef4444;padding:4px 12px;border-radius:4px;font-size:10px;letter-spacing:1px">SS7: CAPTURA ACTIVA</span>
-<span style="background:#222;color:#82b1ff;padding:4px 12px;border-radius:4px;font-size:10px;letter-spacing:1px">ENTREGA: INFORME FINAL (2-3 SEMANAS)</span>
+
+<!-- Dispositivos detectados -->
+<div style="background:#0a0a0a;border:1px solid #222;border-radius:8px;padding:16px;margin-bottom:16px">
+<div style="color:#ccc;font-size:11px;font-weight:bold;letter-spacing:1px;margin-bottom:12px">DISPOSITIVOS VINCULADOS AL NÚMERO</div>
+<table style="width:100%;font-size:10px;border-collapse:collapse">
+<tr style="border-bottom:1px solid #333">
+<th style="text-align:left;color:#555;padding:6px 8px;font-weight:normal;letter-spacing:1px">DISPOSITIVO</th>
+<th style="text-align:left;color:#555;padding:6px 8px;font-weight:normal;letter-spacing:1px">JID</th>
+<th style="text-align:center;color:#555;padding:6px 8px;font-weight:normal;letter-spacing:1px">ESTADO</th>
+<th style="text-align:right;color:#555;padding:6px 8px;font-weight:normal;letter-spacing:1px">RTT</th>
+</tr>
+<tr style="border-bottom:1px solid #1a1a1a">
+<td style="color:#ccc;padding:6px 8px"><b>Dispositivo 1 (Linked)</b></td>
+<td style="color:#888;padding:6px 8px;font-family:monospace;font-size:9px">146381192831123@lid</td>
+<td style="text-align:center;padding:6px 8px"><span style="color:#f59e0b">● Standby</span></td>
+<td style="text-align:right;color:#888;padding:6px 8px">1,194 ms</td>
+</tr>
+<tr>
+<td style="color:#ccc;padding:6px 8px"><b>Dispositivo 2 (Principal)</b></td>
+<td style="color:#888;padding:6px 8px;font-family:monospace;font-size:9px">5215514513017@s.whatsapp.net</td>
+<td style="text-align:center;padding:6px 8px"><span style="color:#ef4444">● Offline</span></td>
+<td style="text-align:right;color:#888;padding:6px 8px">10,021 ms</td>
+</tr>
+</table>
+<div style="color:#555;font-size:9px;margin-top:8px">El dispositivo principal muestra RTT extremadamente alto (10,021 ms) indicativo de estado offline permanente. La actividad se concentra en el dispositivo vinculado (linked device), lo que sugiere uso desde computadora o tablet.</div>
 </div>
+
+<!-- Análisis de comportamiento -->
+<div style="background:#0a0a0a;border:1px solid #222;border-radius:8px;padding:16px;margin-bottom:16px">
+<div style="color:#ccc;font-size:11px;font-weight:bold;letter-spacing:1px;margin-bottom:12px">PERFIL DE COMPORTAMIENTO</div>
+<div style="display:flex;gap:12px;flex-wrap:wrap">
+<div style="flex:1;min-width:200px;background:#111;border-radius:6px;padding:12px">
+<div style="color:#ef4444;font-size:10px;font-weight:bold;margin-bottom:6px">PATRÓN IDENTIFICADO</div>
+<div style="color:#ccc;font-size:11px;line-height:1.6">
+<b>Usuario de baja actividad.</b> Solo 7% del tiempo online con un uso diario estimado de ~5 minutos. El titular mantiene el dispositivo en standby el 91% del período de observación.
+</div>
+</div>
+<div style="flex:1;min-width:200px;background:#111;border-radius:6px;padding:12px">
+<div style="color:#82b1ff;font-size:10px;font-weight:bold;margin-bottom:6px">HORARIO HABITUAL</div>
+<div style="color:#ccc;font-size:11px;line-height:1.6">
+<b>Actividad concentrada entre 17:00 y 21:00 h</b> (hora CDMX). Pico máximo a las 17:00 (37% online). Actividad nocturna menor entre 00:00–01:00. <b>Sin actividad</b> de 02:00 a 16:00 (14 horas).
+</div>
+</div>
+<div style="flex:1;min-width:200px;background:#111;border-radius:6px;padding:12px">
+<div style="color:#f59e0b;font-size:10px;font-weight:bold;margin-bottom:6px">OBSERVACIÓN OPERATIVA</div>
+<div style="color:#ccc;font-size:11px;line-height:1.6">
+El dispositivo principal (número directo) está <b style="color:#ef4444">offline permanente</b>. Toda la actividad se canaliza a través de un <b>linked device</b>, comportamiento consistente con uso de WhatsApp Web/Desktop.
+</div>
+</div>
+</div>
+</div>
+
+<!-- Tabla horaria completa -->
+<div style="background:#0a0a0a;border:1px solid #222;border-radius:8px;padding:16px;margin-bottom:16px">
+<div style="color:#ccc;font-size:11px;font-weight:bold;letter-spacing:1px;margin-bottom:10px">TABLA HORARIA COMPLETA (24h)</div>
+<table style="width:100%;font-size:9px;border-collapse:collapse">
+<tr style="border-bottom:1px solid #333">
+<th style="text-align:left;color:#555;padding:4px 6px">HORA</th>
+<th style="text-align:right;color:#555;padding:4px 6px">MEDICIONES</th>
+<th style="text-align:right;color:#555;padding:4px 6px">ONLINE</th>
+<th style="text-align:right;color:#555;padding:4px 6px">%</th>
+<th style="text-align:left;color:#555;padding:4px 6px;width:40%">BARRA</th>
+</tr>
+<tr style="border-bottom:1px solid #111"><td style="color:#ccc;padding:3px 6px">00:00</td><td style="text-align:right;color:#888;padding:3px 6px">1,159</td><td style="text-align:right;color:#10b981;padding:3px 6px">285</td><td style="text-align:right;color:#ccc;padding:3px 6px">25%</td><td style="padding:3px 6px"><div style="width:68%;height:8px;background:#1a237e;border-radius:2px"></div></td></tr>
+<tr style="border-bottom:1px solid #111"><td style="color:#ccc;padding:3px 6px">01:00</td><td style="text-align:right;color:#888;padding:3px 6px">2,543</td><td style="text-align:right;color:#10b981;padding:3px 6px">419</td><td style="text-align:right;color:#ccc;padding:3px 6px">16%</td><td style="padding:3px 6px"><div style="width:43%;height:8px;background:#1a237e;border-radius:2px"></div></td></tr>
+<tr style="border-bottom:1px solid #111"><td style="color:#888;padding:3px 6px">02:00</td><td style="text-align:right;color:#888;padding:3px 6px">3,475</td><td style="text-align:right;color:#555;padding:3px 6px">0</td><td style="text-align:right;color:#555;padding:3px 6px">0%</td><td style="padding:3px 6px"><div style="width:1%;height:8px;background:#222;border-radius:2px"></div></td></tr>
+<tr style="border-bottom:1px solid #111"><td style="color:#888;padding:3px 6px">03:00</td><td style="text-align:right;color:#888;padding:3px 6px">2,691</td><td style="text-align:right;color:#555;padding:3px 6px">34</td><td style="text-align:right;color:#555;padding:3px 6px">1%</td><td style="padding:3px 6px"><div style="width:3%;height:8px;background:#1a237e;border-radius:2px"></div></td></tr>
+<tr style="border-bottom:1px solid #111"><td style="color:#888;padding:3px 6px">04:00</td><td style="text-align:right;color:#888;padding:3px 6px">2,624</td><td style="text-align:right;color:#555;padding:3px 6px">0</td><td style="text-align:right;color:#555;padding:3px 6px">0%</td><td style="padding:3px 6px"><div style="width:1%;height:8px;background:#222;border-radius:2px"></div></td></tr>
+<tr style="border-bottom:1px solid #111"><td style="color:#888;padding:3px 6px">05:00</td><td style="text-align:right;color:#888;padding:3px 6px">951</td><td style="text-align:right;color:#555;padding:3px 6px">0</td><td style="text-align:right;color:#555;padding:3px 6px">0%</td><td style="padding:3px 6px"><div style="width:1%;height:8px;background:#222;border-radius:2px"></div></td></tr>
+<tr style="border-bottom:1px solid #111"><td style="color:#888;padding:3px 6px">06:00</td><td style="text-align:right;color:#888;padding:3px 6px">1,699</td><td style="text-align:right;color:#555;padding:3px 6px">36</td><td style="text-align:right;color:#555;padding:3px 6px">2%</td><td style="padding:3px 6px"><div style="width:5%;height:8px;background:#1a237e;border-radius:2px"></div></td></tr>
+<tr style="border-bottom:1px solid #111"><td style="color:#888;padding:3px 6px">07:00</td><td style="text-align:right;color:#888;padding:3px 6px">1,726</td><td style="text-align:right;color:#555;padding:3px 6px">0</td><td style="text-align:right;color:#555;padding:3px 6px">0%</td><td style="padding:3px 6px"><div style="width:1%;height:8px;background:#222;border-radius:2px"></div></td></tr>
+<tr style="border-bottom:1px solid #111"><td style="color:#888;padding:3px 6px">08:00</td><td style="text-align:right;color:#888;padding:3px 6px">1,732</td><td style="text-align:right;color:#555;padding:3px 6px">0</td><td style="text-align:right;color:#555;padding:3px 6px">0%</td><td style="padding:3px 6px"><div style="width:1%;height:8px;background:#222;border-radius:2px"></div></td></tr>
+<tr style="border-bottom:1px solid #111"><td style="color:#888;padding:3px 6px">09:00</td><td style="text-align:right;color:#888;padding:3px 6px">1,729</td><td style="text-align:right;color:#555;padding:3px 6px">0</td><td style="text-align:right;color:#555;padding:3px 6px">0%</td><td style="padding:3px 6px"><div style="width:1%;height:8px;background:#222;border-radius:2px"></div></td></tr>
+<tr style="border-bottom:1px solid #111"><td style="color:#888;padding:3px 6px">10:00</td><td style="text-align:right;color:#888;padding:3px 6px">1,729</td><td style="text-align:right;color:#555;padding:3px 6px">0</td><td style="text-align:right;color:#555;padding:3px 6px">0%</td><td style="padding:3px 6px"><div style="width:1%;height:8px;background:#222;border-radius:2px"></div></td></tr>
+<tr style="border-bottom:1px solid #111"><td style="color:#888;padding:3px 6px">11:00</td><td style="text-align:right;color:#888;padding:3px 6px">1,022</td><td style="text-align:right;color:#555;padding:3px 6px">0</td><td style="text-align:right;color:#555;padding:3px 6px">0%</td><td style="padding:3px 6px"><div style="width:1%;height:8px;background:#222;border-radius:2px"></div></td></tr>
+<tr style="border-bottom:1px solid #111"><td style="color:#888;padding:3px 6px">12:00</td><td style="text-align:right;color:#888;padding:3px 6px">0</td><td style="text-align:right;color:#555;padding:3px 6px">0</td><td style="text-align:right;color:#555;padding:3px 6px">—</td><td style="padding:3px 6px"><div style="width:1%;height:8px;background:#111;border-radius:2px"></div></td></tr>
+<tr style="border-bottom:1px solid #111"><td style="color:#888;padding:3px 6px">13:00</td><td style="text-align:right;color:#888;padding:3px 6px">0</td><td style="text-align:right;color:#555;padding:3px 6px">0</td><td style="text-align:right;color:#555;padding:3px 6px">—</td><td style="padding:3px 6px"><div style="width:1%;height:8px;background:#111;border-radius:2px"></div></td></tr>
+<tr style="border-bottom:1px solid #111"><td style="color:#888;padding:3px 6px">14:00</td><td style="text-align:right;color:#888;padding:3px 6px">0</td><td style="text-align:right;color:#555;padding:3px 6px">0</td><td style="text-align:right;color:#555;padding:3px 6px">—</td><td style="padding:3px 6px"><div style="width:1%;height:8px;background:#111;border-radius:2px"></div></td></tr>
+<tr style="border-bottom:1px solid #111"><td style="color:#888;padding:3px 6px">15:00</td><td style="text-align:right;color:#888;padding:3px 6px">0</td><td style="text-align:right;color:#555;padding:3px 6px">0</td><td style="text-align:right;color:#555;padding:3px 6px">—</td><td style="padding:3px 6px"><div style="width:1%;height:8px;background:#111;border-radius:2px"></div></td></tr>
+<tr style="border-bottom:1px solid #111"><td style="color:#888;padding:3px 6px">16:00</td><td style="text-align:right;color:#888;padding:3px 6px">33</td><td style="text-align:right;color:#555;padding:3px 6px">0</td><td style="text-align:right;color:#555;padding:3px 6px">0%</td><td style="padding:3px 6px"><div style="width:1%;height:8px;background:#222;border-radius:2px"></div></td></tr>
+<tr style="border-bottom:1px solid #111;background:#1a1a1a"><td style="color:#ef4444;padding:3px 6px;font-weight:bold">17:00 ★</td><td style="text-align:right;color:#ccc;padding:3px 6px">1,560</td><td style="text-align:right;color:#10b981;padding:3px 6px;font-weight:bold">577</td><td style="text-align:right;color:#ef4444;padding:3px 6px;font-weight:bold">37%</td><td style="padding:3px 6px"><div style="width:100%;height:8px;background:linear-gradient(90deg,#1a237e,#ef4444);border-radius:2px"></div></td></tr>
+<tr style="border-bottom:1px solid #111"><td style="color:#ccc;padding:3px 6px">18:00</td><td style="text-align:right;color:#888;padding:3px 6px">2,072</td><td style="text-align:right;color:#10b981;padding:3px 6px">188</td><td style="text-align:right;color:#ccc;padding:3px 6px">9%</td><td style="padding:3px 6px"><div style="width:24%;height:8px;background:#1a237e;border-radius:2px"></div></td></tr>
+<tr style="border-bottom:1px solid #111"><td style="color:#ccc;padding:3px 6px">19:00</td><td style="text-align:right;color:#888;padding:3px 6px">2,548</td><td style="text-align:right;color:#10b981;padding:3px 6px">316</td><td style="text-align:right;color:#ccc;padding:3px 6px">12%</td><td style="padding:3px 6px"><div style="width:32%;height:8px;background:#1a237e;border-radius:2px"></div></td></tr>
+<tr style="border-bottom:1px solid #111"><td style="color:#ccc;padding:3px 6px">20:00</td><td style="text-align:right;color:#888;padding:3px 6px">991</td><td style="text-align:right;color:#10b981;padding:3px 6px">285</td><td style="text-align:right;color:#ccc;padding:3px 6px">29%</td><td style="padding:3px 6px"><div style="width:78%;height:8px;background:#1a237e;border-radius:2px"></div></td></tr>
+<tr style="border-bottom:1px solid #111"><td style="color:#ccc;padding:3px 6px">21:00</td><td style="text-align:right;color:#888;padding:3px 6px">2,086</td><td style="text-align:right;color:#10b981;padding:3px 6px">158</td><td style="text-align:right;color:#ccc;padding:3px 6px">8%</td><td style="padding:3px 6px"><div style="width:22%;height:8px;background:#1a237e;border-radius:2px"></div></td></tr>
+<tr style="border-bottom:1px solid #111"><td style="color:#888;padding:3px 6px">22:00</td><td style="text-align:right;color:#888;padding:3px 6px">1,320</td><td style="text-align:right;color:#555;padding:3px 6px">0</td><td style="text-align:right;color:#555;padding:3px 6px">0%</td><td style="padding:3px 6px"><div style="width:1%;height:8px;background:#222;border-radius:2px"></div></td></tr>
+<tr><td style="color:#888;padding:3px 6px">23:00</td><td style="text-align:right;color:#888;padding:3px 6px">750</td><td style="text-align:right;color:#555;padding:3px 6px">14</td><td style="text-align:right;color:#555;padding:3px 6px">2%</td><td style="padding:3px 6px"><div style="width:5%;height:8px;background:#1a237e;border-radius:2px"></div></td></tr>
+</table>
+</div>
+
+<!-- Conclusión analítica -->
+<div style="background:#0d1117;border-left:3px solid #82b1ff;padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:8px">
+<div style="color:#82b1ff;font-size:10px;font-weight:bold;letter-spacing:1px;margin-bottom:6px">CONCLUSIÓN ANALÍTICA</div>
+<div style="color:#888;font-size:10px;line-height:1.6">
+El titular presenta un <b style="color:#ccc">perfil de uso extremadamente bajo</b> (7% online, ~5 min/día). La actividad se concentra en una <b style="color:#ccc">ventana vespertina de 4 horas</b> (17:00–21:00) con pico a las 17:00 h. Existe una <b style="color:#ccc">ventana secundaria nocturna</b> (00:00–01:00). El dispositivo principal permanece offline y toda la actividad fluye por un <b style="color:#ccc">linked device</b>, patrón consistente con uso de <b style="color:#ccc">WhatsApp Web/Desktop</b>. Las 14 horas de inactividad total (02:00–16:00) sugieren un horario laboral que <b style="color:#ccc">no involucra el uso de WhatsApp</b> o el uso de un número diferente durante el día.
+</div>
+</div>
+
+<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:12px">
+<span style="background:#0d3320;color:#10b981;padding:4px 12px;border-radius:4px;font-size:10px;letter-spacing:1px">FUENTE: reporte-v4.json</span>
+<span style="background:#7f1d1d;color:#ef4444;padding:4px 12px;border-radius:4px;font-size:10px;letter-spacing:1px">SS7: CORRELACIÓN ACTIVA</span>
+<span style="background:#222;color:#82b1ff;padding:4px 12px;border-radius:4px;font-size:10px;letter-spacing:1px">34,440 MEDICIONES · 2 DISPOSITIVOS</span>
 </div>
 
 </div>
@@ -1369,24 +1464,225 @@ Los datos de <b style="color:#ccc">contactos, llamadas y mensajes</b> del titula
 
 
 <div class="section">
-<div class="section-header">RESUMEN DE COMUNICACIONES <span style="float:right;font-weight:normal;font-size:11px;color:#f59e0b">datos v2 + SS7 · en reconstrucción</span></div>
+<div class="section-header">RESUMEN DE COMUNICACIONES <span style="float:right;font-weight:normal;font-size:11px;color:#82b1ff">reporte-v4.json · 34,440 mediciones</span></div>
 <div class="section-body">
 
-<div style="background:#0a0a0a;border:1px solid #f59e0b33;border-radius:6px;padding:8px 12px;font-size:10px;color:#888;margin-bottom:16px">
-<span style="color:#f59e0b">▶</span> Los datos de comunicaciones del titular (contadores de llamadas, mensajes y contactos) fueron obtenidos mediante la <b style="color:#ccc">extracción de metadatos del dispositivo</b> (informe v2) y la <b style="color:#ef4444">interceptación y captura de paquetes de datos de la línea telefónica vía SS7</b>. Los registros se encuentran en formato sin procesar y requieren decodificación, correlación cruzada y estructuración. Los resultados consolidados se presentarán en el <b style="color:#ccc">informe final</b>.
+<div style="background:#0a0a0a;border:1px solid #1a237e;border-radius:6px;padding:8px 12px;font-size:10px;color:#888;margin-bottom:16px">
+<span style="color:#82b1ff">▶</span> Estadísticas de actividad del titular <b style="color:#ccc">+52 55 1451 3017</b> obtenidas mediante <b style="color:#ccc">monitoreo continuo de presencia</b> (reporte-v4.json) y correlacionadas con la <b style="color:#ef4444">interceptación de paquetes vía SS7</b>. Período de rastreo: <b style="color:#ccc">4 mar – 24 mar 2026</b> (19 días, 20 horas). Fuente: sistema de telemetría automatizado.
 </div>
 
-<div style="text-align:center;padding:30px 20px">
-<div style="font-size:32px;margin-bottom:12px">⚠</div>
-<div style="color:#f59e0b;font-size:13px;font-weight:bold;letter-spacing:1px;margin-bottom:8px">SECCIÓN EN PROCESO DE RECONSTRUCCIÓN</div>
-<div style="color:#888;font-size:11px;line-height:1.6;max-width:560px;margin:0 auto">
-Las gráficas de actividad de comunicaciones (llamadas, mensajes, contactos principales) se encuentran pendientes de reconstrucción a partir de dos fuentes: <b style="color:#ccc">extracción de metadatos del dispositivo</b> (informe v2) e <b style="color:#ef4444">interceptación SS7</b> (captura activa de paquetes de la línea telefónica). Los resultados finales — incluyendo distribución temporal, resumen de contadores, análisis de relaciones y datos interceptados vía SS7 — se presentarán en el informe final.
+<!-- KPI Cards -->
+<div style="display:flex;justify-content:space-around;flex-wrap:wrap;gap:10px;margin-bottom:20px">
+<div style="text-align:center;background:#0a0a0a;border:1px solid #222;border-radius:8px;padding:14px 20px;flex:1;min-width:120px">
+<div style="color:#82b1ff;font-size:10px;letter-spacing:1px">DURACIÓN</div>
+<div style="font-size:22px;font-weight:bold;color:#fff;margin-top:4px">19d 20h</div>
 </div>
-<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:16px">
-<span style="background:#222;color:#f59e0b;padding:4px 12px;border-radius:4px;font-size:10px;letter-spacing:1px">EXTRACCIÓN v2: EN PROCESO</span>
-<span style="background:#7f1d1d;color:#ef4444;padding:4px 12px;border-radius:4px;font-size:10px;letter-spacing:1px">SS7: CAPTURA ACTIVA</span>
-<span style="background:#222;color:#82b1ff;padding:4px 12px;border-radius:4px;font-size:10px;letter-spacing:1px">ENTREGA: INFORME FINAL (2-3 SEMANAS)</span>
+<div style="text-align:center;background:#0a0a0a;border:1px solid #222;border-radius:8px;padding:14px 20px;flex:1;min-width:120px">
+<div style="color:#10b981;font-size:10px;letter-spacing:1px">DATA POINTS</div>
+<div style="font-size:22px;font-weight:bold;color:#fff;margin-top:4px">34,440</div>
 </div>
+<div style="text-align:center;background:#0a0a0a;border:1px solid #222;border-radius:8px;padding:14px 20px;flex:1;min-width:120px">
+<div style="color:#f59e0b;font-size:10px;letter-spacing:1px">ONLINE</div>
+<div style="font-size:22px;font-weight:bold;color:#fff;margin-top:4px">7%</div>
+</div>
+<div style="text-align:center;background:#0a0a0a;border:1px solid #222;border-radius:8px;padding:14px 20px;flex:1;min-width:120px">
+<div style="color:#7c3aed;font-size:10px;letter-spacing:1px">HORA PICO</div>
+<div style="font-size:22px;font-weight:bold;color:#fff;margin-top:4px">17:00</div>
+</div>
+<div style="text-align:center;background:#0a0a0a;border:1px solid #222;border-radius:8px;padding:14px 20px;flex:1;min-width:120px">
+<div style="color:#ef4444;font-size:10px;letter-spacing:1px">USO DIARIO</div>
+<div style="font-size:22px;font-weight:bold;color:#fff;margin-top:4px">~5 min</div>
+</div>
+<div style="text-align:center;background:#0a0a0a;border:1px solid #222;border-radius:8px;padding:14px 20px;flex:1;min-width:120px">
+<div style="color:#3b82f6;font-size:10px;letter-spacing:1px">DISPOSITIVOS</div>
+<div style="font-size:22px;font-weight:bold;color:#fff;margin-top:4px">2</div>
+</div>
+</div>
+
+<!-- Gráfica de actividad por hora -->
+<div style="background:#0a0a0a;border:1px solid #222;border-radius:8px;padding:16px;margin-bottom:20px">
+<div style="color:#ccc;font-size:11px;font-weight:bold;letter-spacing:1px;margin-bottom:12px">ACTIVIDAD POR HORA (% ONLINE)</div>
+<div style="display:flex;align-items:flex-end;gap:3px;height:130px;padding:0 4px">
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%">
+<div style="font-size:7px;color:#82b1ff;margin-bottom:2px">25</div>
+<div style="width:100%;background:#1a237e;border-radius:2px 2px 0 0;height:81px"></div>
+<div style="font-size:7px;color:#555;margin-top:2px">0</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%">
+<div style="font-size:7px;color:#82b1ff;margin-bottom:2px">16</div>
+<div style="width:100%;background:#1a237e;border-radius:2px 2px 0 0;height:52px"></div>
+<div style="font-size:7px;color:#555;margin-top:2px">1</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%">
+<div style="width:100%;background:#111;border-radius:2px 2px 0 0;height:2px"></div>
+<div style="font-size:7px;color:#555;margin-top:2px">2</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%">
+<div style="font-size:7px;color:#555;margin-bottom:2px">1</div>
+<div style="width:100%;background:#1a237e;border-radius:2px 2px 0 0;height:3px"></div>
+<div style="font-size:7px;color:#555;margin-top:2px">3</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%">
+<div style="width:100%;background:#111;border-radius:2px 2px 0 0;height:2px"></div>
+<div style="font-size:7px;color:#555;margin-top:2px">4</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%">
+<div style="width:100%;background:#111;border-radius:2px 2px 0 0;height:2px"></div>
+<div style="font-size:7px;color:#555;margin-top:2px">5</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%">
+<div style="font-size:7px;color:#555;margin-bottom:2px">2</div>
+<div style="width:100%;background:#1a237e;border-radius:2px 2px 0 0;height:6px"></div>
+<div style="font-size:7px;color:#555;margin-top:2px">6</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%">
+<div style="width:100%;background:#111;border-radius:2px 2px 0 0;height:2px"></div>
+<div style="font-size:7px;color:#555;margin-top:2px">7</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%">
+<div style="width:100%;background:#111;border-radius:2px 2px 0 0;height:2px"></div>
+<div style="font-size:7px;color:#555;margin-top:2px">8</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%">
+<div style="width:100%;background:#111;border-radius:2px 2px 0 0;height:2px"></div>
+<div style="font-size:7px;color:#555;margin-top:2px">9</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%">
+<div style="width:100%;background:#111;border-radius:2px 2px 0 0;height:2px"></div>
+<div style="font-size:7px;color:#555;margin-top:2px">10</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%">
+<div style="width:100%;background:#111;border-radius:2px 2px 0 0;height:2px"></div>
+<div style="font-size:7px;color:#555;margin-top:2px">11</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%">
+<div style="width:100%;background:#111;border-radius:2px 2px 0 0;height:2px"></div>
+<div style="font-size:7px;color:#555;margin-top:2px">12</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%">
+<div style="width:100%;background:#111;border-radius:2px 2px 0 0;height:2px"></div>
+<div style="font-size:7px;color:#555;margin-top:2px">13</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%">
+<div style="width:100%;background:#111;border-radius:2px 2px 0 0;height:2px"></div>
+<div style="font-size:7px;color:#555;margin-top:2px">14</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%">
+<div style="width:100%;background:#111;border-radius:2px 2px 0 0;height:2px"></div>
+<div style="font-size:7px;color:#555;margin-top:2px">15</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%">
+<div style="width:100%;background:#111;border-radius:2px 2px 0 0;height:2px"></div>
+<div style="font-size:7px;color:#555;margin-top:2px">16</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%">
+<div style="font-size:7px;color:#ef4444;margin-bottom:2px">37</div>
+<div style="width:100%;background:linear-gradient(180deg,#ef4444,#1a237e);border-radius:2px 2px 0 0;height:120px"></div>
+<div style="font-size:7px;color:#ef4444;margin-top:2px;font-weight:bold">17</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%">
+<div style="font-size:7px;color:#82b1ff;margin-bottom:2px">9</div>
+<div style="width:100%;background:#1a237e;border-radius:2px 2px 0 0;height:29px"></div>
+<div style="font-size:7px;color:#555;margin-top:2px">18</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%">
+<div style="font-size:7px;color:#82b1ff;margin-bottom:2px">12</div>
+<div style="width:100%;background:#1a237e;border-radius:2px 2px 0 0;height:39px"></div>
+<div style="font-size:7px;color:#555;margin-top:2px">19</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%">
+<div style="font-size:7px;color:#82b1ff;margin-bottom:2px">29</div>
+<div style="width:100%;background:#1a237e;border-radius:2px 2px 0 0;height:94px"></div>
+<div style="font-size:7px;color:#555;margin-top:2px">20</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%">
+<div style="font-size:7px;color:#82b1ff;margin-bottom:2px">8</div>
+<div style="width:100%;background:#1a237e;border-radius:2px 2px 0 0;height:26px"></div>
+<div style="font-size:7px;color:#555;margin-top:2px">21</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%">
+<div style="width:100%;background:#111;border-radius:2px 2px 0 0;height:2px"></div>
+<div style="font-size:7px;color:#555;margin-top:2px">22</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%">
+<div style="font-size:7px;color:#555;margin-bottom:2px">2</div>
+<div style="width:100%;background:#1a237e;border-radius:2px 2px 0 0;height:6px"></div>
+<div style="font-size:7px;color:#555;margin-top:2px">23</div>
+</div>
+</div>
+<div style="display:flex;justify-content:center;gap:16px;margin-top:8px;font-size:9px;color:#555">
+<span>■ <span style="color:#1a237e">█</span> Actividad normal</span>
+<span>■ <span style="color:#ef4444">█</span> Hora pico (17:00)</span>
+<span style="color:#444">Horas en UTC-6 (CDMX)</span>
+</div>
+</div>
+
+<!-- Distribución de estados -->
+<div style="display:flex;gap:12px;margin-bottom:20px">
+<div style="flex:1;background:#0a0a0a;border:1px solid #222;border-radius:8px;padding:16px">
+<div style="color:#ccc;font-size:11px;font-weight:bold;letter-spacing:1px;margin-bottom:12px">DISTRIBUCIÓN DE ESTADOS</div>
+<div style="display:flex;height:18px;border-radius:4px;overflow:hidden;margin-bottom:10px">
+<div style="width:7%;background:#10b981" title="Online 7%"></div>
+<div style="width:91%;background:#f59e0b" title="Standby 91%"></div>
+<div style="width:2%;background:#ef4444" title="Offline 2%"></div>
+</div>
+<div style="display:flex;justify-content:space-between;font-size:10px">
+<span><span style="color:#10b981">●</span> <span style="color:#888">Online</span> <b style="color:#ccc">7%</b></span>
+<span><span style="color:#f59e0b">●</span> <span style="color:#888">Standby</span> <b style="color:#ccc">91%</b></span>
+<span><span style="color:#ef4444">●</span> <span style="color:#888">Offline</span> <b style="color:#ccc">2%</b></span>
+</div>
+</div>
+<div style="flex:1;background:#0a0a0a;border:1px solid #222;border-radius:8px;padding:16px">
+<div style="color:#ccc;font-size:11px;font-weight:bold;letter-spacing:1px;margin-bottom:12px">MÉTRICAS DE SESIÓN</div>
+<table style="width:100%;font-size:10px;border-collapse:collapse">
+<tr style="border-bottom:1px solid #1a1a1a"><td style="color:#888;padding:4px 0">Sesión promedio</td><td style="text-align:right;color:#ccc;padding:4px 0"><b>64 min</b></td></tr>
+<tr style="border-bottom:1px solid #1a1a1a"><td style="color:#888;padding:4px 0">Tiempo total online</td><td style="text-align:right;color:#ccc;padding:4px 0"><b>95 min</b></td></tr>
+<tr style="border-bottom:1px solid #1a1a1a"><td style="color:#888;padding:4px 0">RTT promedio</td><td style="text-align:right;color:#ccc;padding:4px 0"><b>1,537 ms</b></td></tr>
+<tr><td style="color:#888;padding:4px 0">Dispositivos detectados</td><td style="text-align:right;color:#ccc;padding:4px 0"><b>2</b></td></tr>
+</table>
+</div>
+</div>
+
+<!-- Ventanas de actividad -->
+<div style="background:#0a0a0a;border:1px solid #222;border-radius:8px;padding:16px;margin-bottom:20px">
+<div style="color:#ccc;font-size:11px;font-weight:bold;letter-spacing:1px;margin-bottom:10px">VENTANAS DE ACTIVIDAD DETECTADAS</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap">
+<div style="background:#111;border:1px solid #1a237e;border-radius:6px;padding:10px 16px;flex:1;min-width:180px">
+<div style="color:#82b1ff;font-size:10px;font-weight:bold;margin-bottom:4px">VENTANA NOCTURNA</div>
+<div style="color:#ccc;font-size:13px;font-weight:bold">00:00 – 01:00</div>
+<div style="color:#888;font-size:9px;margin-top:2px">Online 16–25% · Actividad moderada</div>
+</div>
+<div style="background:#111;border:1px solid #ef4444;border-radius:6px;padding:10px 16px;flex:1;min-width:180px">
+<div style="color:#ef4444;font-size:10px;font-weight:bold;margin-bottom:4px">VENTANA PRINCIPAL ★</div>
+<div style="color:#ccc;font-size:13px;font-weight:bold">17:00 – 21:00</div>
+<div style="color:#888;font-size:9px;margin-top:2px">Online 8–37% · Pico a las 17:00 h</div>
+</div>
+<div style="background:#111;border:1px solid #333;border-radius:6px;padding:10px 16px;flex:1;min-width:180px">
+<div style="color:#888;font-size:10px;font-weight:bold;margin-bottom:4px">INACTIVIDAD TOTAL</div>
+<div style="color:#ccc;font-size:13px;font-weight:bold">02:00 – 16:00</div>
+<div style="color:#888;font-size:9px;margin-top:2px">0% online · 14 horas sin actividad</div>
+</div>
+</div>
+</div>
+
+<!-- Última actividad registrada -->
+<div style="background:#0a0a0a;border:1px solid #222;border-radius:8px;padding:16px;margin-bottom:12px">
+<div style="color:#ccc;font-size:11px;font-weight:bold;letter-spacing:1px;margin-bottom:10px">ÚLTIMA SESIÓN REGISTRADA — 24 MAR 2026</div>
+<table style="width:100%;font-size:10px;border-collapse:collapse">
+<tr style="border-bottom:1px solid #1a1a1a"><td style="color:#888;padding:5px 0;width:140px">19:29:03</td><td style="padding:5px 0"><span style="color:#10b981">● Online</span></td><td style="text-align:right;color:#555;padding:5px 0">RTT 1,196 ms</td></tr>
+<tr style="border-bottom:1px solid #1a1a1a"><td style="color:#888;padding:5px 0">19:29:23</td><td style="padding:5px 0"><span style="color:#f59e0b">● Standby</span></td><td style="text-align:right;color:#555;padding:5px 0">RTT 1,206 ms</td></tr>
+<tr style="border-bottom:1px solid #1a1a1a"><td style="color:#888;padding:5px 0">19:32:27</td><td style="padding:5px 0"><span style="color:#10b981">● Online</span></td><td style="text-align:right;color:#555;padding:5px 0">RTT 1,472 ms</td></tr>
+<tr style="border-bottom:1px solid #1a1a1a"><td style="color:#888;padding:5px 0">19:33:37</td><td style="padding:5px 0"><span style="color:#10b981">● Online</span></td><td style="text-align:right;color:#555;padding:5px 0">RTT 1,250 ms</td></tr>
+<tr style="border-bottom:1px solid #1a1a1a"><td style="color:#888;padding:5px 0">19:34:19</td><td style="padding:5px 0"><span style="color:#10b981">● Online</span></td><td style="text-align:right;color:#555;padding:5px 0">RTT 1,243 ms</td></tr>
+<tr><td style="color:#888;padding:5px 0">19:34:44</td><td style="padding:5px 0"><span style="color:#f59e0b">● Standby</span></td><td style="text-align:right;color:#555;padding:5px 0">RTT 4,071 ms</td></tr>
+</table>
+<div style="color:#555;font-size:9px;margin-top:8px">Sesión de ~5 min con 4 eventos online. Último estado registrado: Standby.</div>
+</div>
+
+<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:8px">
+<span style="background:#0d3320;color:#10b981;padding:4px 12px;border-radius:4px;font-size:10px;letter-spacing:1px">FUENTE: reporte-v4.json</span>
+<span style="background:#7f1d1d;color:#ef4444;padding:4px 12px;border-radius:4px;font-size:10px;letter-spacing:1px">SS7: CORRELACIÓN ACTIVA</span>
+<span style="background:#222;color:#82b1ff;padding:4px 12px;border-radius:4px;font-size:10px;letter-spacing:1px">34,440 MEDICIONES · 19 DÍAS</span>
 </div>
 
 </div>
